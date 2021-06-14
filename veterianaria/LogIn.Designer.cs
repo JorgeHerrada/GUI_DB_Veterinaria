@@ -90,6 +90,7 @@ namespace veterianaria
             this.Controls.Add(this.lbl_PASSWORD);
             this.Controls.Add(this.lbl_USER);
             this.Name = "LogIn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Inicio de Sesión  -  CHUCHOLANDIA®";
             this.Load += new System.EventHandler(this.LogIn_Load);
             this.ResumeLayout(false);

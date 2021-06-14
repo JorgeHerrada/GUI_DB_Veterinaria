@@ -21,5 +21,15 @@ namespace veterianaria
         {
             this.Close();
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Visitas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

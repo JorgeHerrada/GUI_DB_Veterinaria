@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace veterianaria
 {
-    public partial class Clientes : Form
+    public partial class Servicios : Form
     {
-        public Clientes()
+        public Servicios()
         {
             InitializeComponent();
         }
@@ -20,11 +20,6 @@ namespace veterianaria
         private void btn_exit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

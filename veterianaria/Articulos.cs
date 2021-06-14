@@ -16,5 +16,10 @@ namespace veterianaria
         {
             InitializeComponent();
         }
+
+        private void btn_EXIT_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

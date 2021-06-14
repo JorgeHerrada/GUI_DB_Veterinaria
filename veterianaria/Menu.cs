@@ -61,5 +61,16 @@ namespace veterianaria
             Proveedores proveedores_form = new Proveedores();
             proveedores_form.Show();
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_SERVICIOS_Click(object sender, EventArgs e)
+        {
+            Servicios servicios_form = new Servicios();
+            servicios_form.Show();
+        }
     }
 }

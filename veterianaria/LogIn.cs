@@ -36,6 +36,10 @@ namespace veterianaria
                     menuOpciones.Show(); // DISPLAY INSTANCE
                     // IF "this.Close()" IS USED, IT WILL CLOSE ALL INSTANCES THAT DEPEND ON "this" LIKE: "menuOpciones"
                 }
+                else
+                {
+                    MessageBox.Show("El usuario y/o Contraseña no coinciden. Intenta de nuevo.", "¡ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
