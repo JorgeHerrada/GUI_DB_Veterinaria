@@ -52,7 +52,7 @@ namespace veterianaria
 
         private void btn_ARTICULOS_Click(object sender, EventArgs e)
         {
-            Articulos articulos_form = new Articulos();
+            Productos articulos_form = new Productos();
             articulos_form.Show();
         }
 

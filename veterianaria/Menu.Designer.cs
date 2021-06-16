@@ -30,7 +30,7 @@ namespace veterianaria
         private void InitializeComponent()
         {
             this.btn_CLIENTES = new System.Windows.Forms.Button();
-            this.btn_ARTICULOS = new System.Windows.Forms.Button();
+            this.btn_PRODUCTOS = new System.Windows.Forms.Button();
             this.btn_PERSONAL = new System.Windows.Forms.Button();
             this.btn_MASCOTAS = new System.Windows.Forms.Button();
             this.btn_VISITAS = new System.Windows.Forms.Button();
@@ -43,34 +43,34 @@ namespace veterianaria
             // btn_CLIENTES
             // 
             this.btn_CLIENTES.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.btn_CLIENTES.Location = new System.Drawing.Point(99, 132);
-            this.btn_CLIENTES.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_CLIENTES.Location = new System.Drawing.Point(132, 162);
+            this.btn_CLIENTES.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_CLIENTES.Name = "btn_CLIENTES";
-            this.btn_CLIENTES.Size = new System.Drawing.Size(122, 47);
+            this.btn_CLIENTES.Size = new System.Drawing.Size(163, 58);
             this.btn_CLIENTES.TabIndex = 0;
             this.btn_CLIENTES.Text = "Clientes";
             this.btn_CLIENTES.UseVisualStyleBackColor = true;
             this.btn_CLIENTES.Click += new System.EventHandler(this.btn_CLIENTES_Click);
             // 
-            // btn_ARTICULOS
+            // btn_PRODUCTOS
             // 
-            this.btn_ARTICULOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.btn_ARTICULOS.Location = new System.Drawing.Point(99, 206);
-            this.btn_ARTICULOS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_ARTICULOS.Name = "btn_ARTICULOS";
-            this.btn_ARTICULOS.Size = new System.Drawing.Size(122, 47);
-            this.btn_ARTICULOS.TabIndex = 2;
-            this.btn_ARTICULOS.Text = "Articulos";
-            this.btn_ARTICULOS.UseVisualStyleBackColor = true;
-            this.btn_ARTICULOS.Click += new System.EventHandler(this.btn_ARTICULOS_Click);
+            this.btn_PRODUCTOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.btn_PRODUCTOS.Location = new System.Drawing.Point(633, 162);
+            this.btn_PRODUCTOS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_PRODUCTOS.Name = "btn_PRODUCTOS";
+            this.btn_PRODUCTOS.Size = new System.Drawing.Size(163, 58);
+            this.btn_PRODUCTOS.TabIndex = 2;
+            this.btn_PRODUCTOS.Text = "Productos";
+            this.btn_PRODUCTOS.UseVisualStyleBackColor = true;
+            this.btn_PRODUCTOS.Click += new System.EventHandler(this.btn_ARTICULOS_Click);
             // 
             // btn_PERSONAL
             // 
             this.btn_PERSONAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.btn_PERSONAL.Location = new System.Drawing.Point(286, 132);
-            this.btn_PERSONAL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_PERSONAL.Location = new System.Drawing.Point(381, 349);
+            this.btn_PERSONAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_PERSONAL.Name = "btn_PERSONAL";
-            this.btn_PERSONAL.Size = new System.Drawing.Size(122, 47);
+            this.btn_PERSONAL.Size = new System.Drawing.Size(163, 58);
             this.btn_PERSONAL.TabIndex = 3;
             this.btn_PERSONAL.Text = "Personal";
             this.btn_PERSONAL.UseVisualStyleBackColor = true;
@@ -79,10 +79,10 @@ namespace veterianaria
             // btn_MASCOTAS
             // 
             this.btn_MASCOTAS.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.btn_MASCOTAS.Location = new System.Drawing.Point(475, 132);
-            this.btn_MASCOTAS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_MASCOTAS.Location = new System.Drawing.Point(132, 254);
+            this.btn_MASCOTAS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_MASCOTAS.Name = "btn_MASCOTAS";
-            this.btn_MASCOTAS.Size = new System.Drawing.Size(122, 47);
+            this.btn_MASCOTAS.Size = new System.Drawing.Size(163, 58);
             this.btn_MASCOTAS.TabIndex = 4;
             this.btn_MASCOTAS.Text = "Mascotas";
             this.btn_MASCOTAS.UseVisualStyleBackColor = true;
@@ -91,10 +91,10 @@ namespace veterianaria
             // btn_VISITAS
             // 
             this.btn_VISITAS.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.btn_VISITAS.Location = new System.Drawing.Point(286, 206);
-            this.btn_VISITAS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_VISITAS.Location = new System.Drawing.Point(381, 254);
+            this.btn_VISITAS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_VISITAS.Name = "btn_VISITAS";
-            this.btn_VISITAS.Size = new System.Drawing.Size(122, 47);
+            this.btn_VISITAS.Size = new System.Drawing.Size(163, 58);
             this.btn_VISITAS.TabIndex = 5;
             this.btn_VISITAS.Text = "Visitas";
             this.btn_VISITAS.UseVisualStyleBackColor = true;
@@ -103,10 +103,10 @@ namespace veterianaria
             // btn_PROVEEDORES
             // 
             this.btn_PROVEEDORES.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.btn_PROVEEDORES.Location = new System.Drawing.Point(475, 206);
-            this.btn_PROVEEDORES.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_PROVEEDORES.Location = new System.Drawing.Point(633, 254);
+            this.btn_PROVEEDORES.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_PROVEEDORES.Name = "btn_PROVEEDORES";
-            this.btn_PROVEEDORES.Size = new System.Drawing.Size(122, 47);
+            this.btn_PROVEEDORES.Size = new System.Drawing.Size(163, 58);
             this.btn_PROVEEDORES.TabIndex = 6;
             this.btn_PROVEEDORES.Text = "Proveedores";
             this.btn_PROVEEDORES.UseVisualStyleBackColor = true;
@@ -115,10 +115,10 @@ namespace veterianaria
             // btn_EXIT
             // 
             this.btn_EXIT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.btn_EXIT.Location = new System.Drawing.Point(286, 429);
-            this.btn_EXIT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_EXIT.Location = new System.Drawing.Point(381, 528);
+            this.btn_EXIT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_EXIT.Name = "btn_EXIT";
-            this.btn_EXIT.Size = new System.Drawing.Size(122, 47);
+            this.btn_EXIT.Size = new System.Drawing.Size(163, 58);
             this.btn_EXIT.TabIndex = 7;
             this.btn_EXIT.Text = "SALIR";
             this.btn_EXIT.UseVisualStyleBackColor = true;
@@ -127,20 +127,19 @@ namespace veterianaria
             // lbl_tittle
             // 
             this.lbl_tittle.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tittle.Location = new System.Drawing.Point(202, 54);
-            this.lbl_tittle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_tittle.Location = new System.Drawing.Point(269, 66);
             this.lbl_tittle.Name = "lbl_tittle";
-            this.lbl_tittle.Size = new System.Drawing.Size(329, 47);
+            this.lbl_tittle.Size = new System.Drawing.Size(439, 58);
             this.lbl_tittle.TabIndex = 8;
             this.lbl_tittle.Text = " ¿A dónde quieres ir?";
             // 
             // btn_SERVICIOS
             // 
             this.btn_SERVICIOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.btn_SERVICIOS.Location = new System.Drawing.Point(286, 282);
-            this.btn_SERVICIOS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_SERVICIOS.Location = new System.Drawing.Point(381, 162);
+            this.btn_SERVICIOS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_SERVICIOS.Name = "btn_SERVICIOS";
-            this.btn_SERVICIOS.Size = new System.Drawing.Size(122, 47);
+            this.btn_SERVICIOS.Size = new System.Drawing.Size(163, 58);
             this.btn_SERVICIOS.TabIndex = 9;
             this.btn_SERVICIOS.Text = "Servicios";
             this.btn_SERVICIOS.UseVisualStyleBackColor = true;
@@ -148,9 +147,9 @@ namespace veterianaria
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 511);
+            this.ClientSize = new System.Drawing.Size(939, 629);
             this.Controls.Add(this.btn_SERVICIOS);
             this.Controls.Add(this.lbl_tittle);
             this.Controls.Add(this.btn_EXIT);
@@ -158,9 +157,9 @@ namespace veterianaria
             this.Controls.Add(this.btn_VISITAS);
             this.Controls.Add(this.btn_MASCOTAS);
             this.Controls.Add(this.btn_PERSONAL);
-            this.Controls.Add(this.btn_ARTICULOS);
+            this.Controls.Add(this.btn_PRODUCTOS);
             this.Controls.Add(this.btn_CLIENTES);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Menu";
             this.Text = "Menu  -  CHUCHOLANDIA®";
             this.Load += new System.EventHandler(this.Menu_Load);
@@ -171,7 +170,7 @@ namespace veterianaria
         #endregion
 
         private System.Windows.Forms.Button btn_CLIENTES;
-        private System.Windows.Forms.Button btn_ARTICULOS;
+        private System.Windows.Forms.Button btn_PRODUCTOS;
         private System.Windows.Forms.Button btn_PERSONAL;
         private System.Windows.Forms.Button btn_MASCOTAS;
         private System.Windows.Forms.Button btn_VISITAS;

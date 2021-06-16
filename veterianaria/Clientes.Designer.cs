@@ -36,8 +36,8 @@ namespace veterianaria
             this.lbl_CONSULTA_NOMBRE = new System.Windows.Forms.Label();
             this.lbl_CONSULTA_CODIGO = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbx_consulta_nombre = new System.Windows.Forms.TextBox();
+            this.tbx_consulta_codigo = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,8 +49,8 @@ namespace veterianaria
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.CONSULTAR = new System.Windows.Forms.Button();
+            this.btn_CONSULTAR_TODO = new System.Windows.Forms.Button();
             this.dtgv_CLIENTES = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_CLIENTES)).BeginInit();
             this.SuspendLayout();
@@ -123,25 +123,25 @@ namespace veterianaria
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1037, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1296, 38);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // textBox1
+            // tbx_consulta_nombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(147, 158);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 8;
+            this.tbx_consulta_nombre.Location = new System.Drawing.Point(147, 158);
+            this.tbx_consulta_nombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_consulta_nombre.Name = "tbx_consulta_nombre";
+            this.tbx_consulta_nombre.Size = new System.Drawing.Size(100, 22);
+            this.tbx_consulta_nombre.TabIndex = 8;
             // 
-            // textBox2
+            // tbx_consulta_codigo
             // 
-            this.textBox2.Location = new System.Drawing.Point(147, 206);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 9;
+            this.tbx_consulta_codigo.Location = new System.Drawing.Point(147, 206);
+            this.tbx_consulta_codigo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_consulta_codigo.Name = "tbx_consulta_codigo";
+            this.tbx_consulta_codigo.Size = new System.Drawing.Size(100, 22);
+            this.tbx_consulta_codigo.TabIndex = 9;
             // 
             // textBox3
             // 
@@ -232,33 +232,34 @@ namespace veterianaria
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(825, 249);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(164, 48);
             this.button1.TabIndex = 22;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // CONSULTAR
             // 
-            this.button2.Location = new System.Drawing.Point(38, 249);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 48);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Consultar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.CONSULTAR.Location = new System.Drawing.Point(38, 249);
+            this.CONSULTAR.Margin = new System.Windows.Forms.Padding(4);
+            this.CONSULTAR.Name = "CONSULTAR";
+            this.CONSULTAR.Size = new System.Drawing.Size(164, 48);
+            this.CONSULTAR.TabIndex = 23;
+            this.CONSULTAR.Text = "Consultar";
+            this.CONSULTAR.UseVisualStyleBackColor = true;
+            this.CONSULTAR.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btn_CONSULTAR_TODO
             // 
-            this.button3.Location = new System.Drawing.Point(38, 581);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(164, 48);
-            this.button3.TabIndex = 24;
-            this.button3.Text = "CONSULTAR TODO";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btn_CONSULTAR_TODO.Location = new System.Drawing.Point(38, 581);
+            this.btn_CONSULTAR_TODO.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_CONSULTAR_TODO.Name = "btn_CONSULTAR_TODO";
+            this.btn_CONSULTAR_TODO.Size = new System.Drawing.Size(164, 48);
+            this.btn_CONSULTAR_TODO.TabIndex = 24;
+            this.btn_CONSULTAR_TODO.Text = "CONSULTAR TODO";
+            this.btn_CONSULTAR_TODO.UseVisualStyleBackColor = true;
+            this.btn_CONSULTAR_TODO.Click += new System.EventHandler(this.button3_Click);
             // 
             // dtgv_CLIENTES
             // 
@@ -276,8 +277,8 @@ namespace veterianaria
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1037, 654);
             this.Controls.Add(this.dtgv_CLIENTES);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_CONSULTAR_TODO);
+            this.Controls.Add(this.CONSULTAR);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label6);
@@ -289,8 +290,8 @@ namespace veterianaria
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbx_consulta_codigo);
+            this.Controls.Add(this.tbx_consulta_nombre);
             this.Controls.Add(this.lbl_CONSULTA_CODIGO);
             this.Controls.Add(this.lbl_CONSULTA_NOMBRE);
             this.Controls.Add(this.rbtn_AGREGAR);
@@ -301,6 +302,7 @@ namespace veterianaria
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Clientes";
+            this.RightToLeftLayout = true;
             this.Text = "Clientes  -  CHUCHOLANDIA®";
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_CLIENTES)).EndInit();
             this.ResumeLayout(false);
@@ -317,8 +319,8 @@ namespace veterianaria
         private System.Windows.Forms.Label lbl_CONSULTA_NOMBRE;
         private System.Windows.Forms.Label lbl_CONSULTA_CODIGO;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbx_consulta_nombre;
+        private System.Windows.Forms.TextBox tbx_consulta_codigo;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label1;
@@ -330,8 +332,8 @@ namespace veterianaria
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button CONSULTAR;
+        private System.Windows.Forms.Button btn_CONSULTAR_TODO;
         private System.Windows.Forms.DataGridView dtgv_CLIENTES;
     }
 }

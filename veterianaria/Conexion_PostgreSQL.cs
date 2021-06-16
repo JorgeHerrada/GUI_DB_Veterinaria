@@ -36,5 +36,30 @@ namespace veterianaria
 
             return tabla;
         }
+
+        // Metodo para consultar todos los atributos de cierta tabla según el nombre
+        // Funciona bien para todos menos visitas. Parcialmente Clientes y Personal
+        public DataTable Consultar_Nombre(string nombre_tabla,string nombre)
+        {
+            string query = "select * from " + nombre_tabla + " where nombre like '%" + nombre + "%'";
+            NpgsqlCommand conector = new NpgsqlCommand(query, conn);
+            NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
+            DataTable tabla = new DataTable();
+            datos.Fill(tabla);
+
+            return tabla;
+        }
+
+        // Metodo para consultar todos los atributos de cierta tabla según el codigo
+        public DataTable Consultar_Codigo(string nombre_tabla, string codigo)
+        {
+            string query = "select * from " + nombre_tabla + " where id = " + codigo;
+            NpgsqlCommand conector = new NpgsqlCommand(query, conn);
+            NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
+            DataTable tabla = new DataTable();
+            datos.Fill(tabla);
+
+            return tabla;
+        }
     }
 }

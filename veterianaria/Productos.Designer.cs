@@ -1,7 +1,7 @@
 ﻿
 namespace veterianaria
 {
-    partial class Articulos
+    partial class Productos
     {
         /// <summary>
         /// Required designer variable.
@@ -54,14 +54,14 @@ namespace veterianaria
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.dtgv_ARTICULOS = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgv_ARTICULOS)).BeginInit();
+            this.dtgv_PRODUCTOS = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgv_PRODUCTOS)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_EXIT
             // 
             this.btn_EXIT.Location = new System.Drawing.Point(825, 689);
-            this.btn_EXIT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_EXIT.Margin = new System.Windows.Forms.Padding(4);
             this.btn_EXIT.Name = "btn_EXIT";
             this.btn_EXIT.Size = new System.Drawing.Size(164, 48);
             this.btn_EXIT.TabIndex = 0;
@@ -76,7 +76,7 @@ namespace veterianaria
             this.lbl_titulo.Name = "lbl_titulo";
             this.lbl_titulo.Size = new System.Drawing.Size(221, 79);
             this.lbl_titulo.TabIndex = 1;
-            this.lbl_titulo.Text = "Articulos";
+            this.lbl_titulo.Text = "Productos";
             // 
             // textBox8
             // 
@@ -258,7 +258,7 @@ namespace veterianaria
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(825, 331);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(164, 48);
             this.button1.TabIndex = 43;
@@ -268,7 +268,7 @@ namespace veterianaria
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(68, 308);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(164, 48);
             this.button2.TabIndex = 44;
@@ -277,8 +277,8 @@ namespace veterianaria
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(91, 689);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Location = new System.Drawing.Point(67, 689);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(164, 48);
             this.button3.TabIndex = 45;
@@ -286,22 +286,22 @@ namespace veterianaria
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // dtgv_ARTICULOS
+            // dtgv_PRODUCTOS
             // 
-            this.dtgv_ARTICULOS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgv_ARTICULOS.Location = new System.Drawing.Point(68, 410);
-            this.dtgv_ARTICULOS.Name = "dtgv_ARTICULOS";
-            this.dtgv_ARTICULOS.RowHeadersWidth = 51;
-            this.dtgv_ARTICULOS.RowTemplate.Height = 24;
-            this.dtgv_ARTICULOS.Size = new System.Drawing.Size(950, 238);
-            this.dtgv_ARTICULOS.TabIndex = 46;
+            this.dtgv_PRODUCTOS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgv_PRODUCTOS.Location = new System.Drawing.Point(68, 410);
+            this.dtgv_PRODUCTOS.Name = "dtgv_PRODUCTOS";
+            this.dtgv_PRODUCTOS.RowHeadersWidth = 51;
+            this.dtgv_PRODUCTOS.RowTemplate.Height = 24;
+            this.dtgv_PRODUCTOS.Size = new System.Drawing.Size(950, 238);
+            this.dtgv_PRODUCTOS.TabIndex = 46;
             // 
-            // Articulos
+            // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1083, 752);
-            this.Controls.Add(this.dtgv_ARTICULOS);
+            this.Controls.Add(this.dtgv_PRODUCTOS);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -327,10 +327,10 @@ namespace veterianaria
             this.Controls.Add(this.rbtn_CONSULTAR);
             this.Controls.Add(this.lbl_titulo);
             this.Controls.Add(this.btn_EXIT);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Articulos";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "Productos";
             this.Text = "Articulos  -  CHUCHOLANDIA®";
-            ((System.ComponentModel.ISupportInitialize)(this.dtgv_ARTICULOS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgv_PRODUCTOS)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,6 +363,6 @@ namespace veterianaria
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView dtgv_ARTICULOS;
+        private System.Windows.Forms.DataGridView dtgv_PRODUCTOS;
     }
 }

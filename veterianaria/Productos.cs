@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace veterianaria
 {
-    public partial class Articulos : Form
+    public partial class Productos : Form
     {
         Conexion_PostgreSQL conectandose = new Conexion_PostgreSQL();
-        public Articulos()
+        public Productos()
         {
             InitializeComponent();
         }
@@ -26,7 +26,7 @@ namespace veterianaria
         private void button3_Click(object sender, EventArgs e)
         {
             conectandose.Conectar();
-            dtgv_ARTICULOS.DataSource = conectandose.Consultar("articulos");
+            dtgv_PRODUCTOS.DataSource = conectandose.Consultar("productos");
             conectandose.Desconectar();
         }
     }
