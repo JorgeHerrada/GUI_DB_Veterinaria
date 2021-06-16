@@ -12,6 +12,7 @@ namespace veterianaria
 {
     public partial class Servicios : Form
     {
+        Conexion_PostgreSQL conectandose = new Conexion_PostgreSQL();
         public Servicios()
         {
             InitializeComponent();
@@ -20,6 +21,13 @@ namespace veterianaria
         private void btn_exit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            conectandose.Conectar();
+            dtgv_SERVICIOS.DataSource = conectandose.Consultar("servicios");
+            conectandose.Desconectar();
         }
     }
 }

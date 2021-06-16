@@ -12,6 +12,7 @@ namespace veterianaria
 {
     public partial class Clientes : Form
     {
+        Conexion_PostgreSQL conectandose = new Conexion_PostgreSQL();
         public Clientes()
         {
             InitializeComponent();
@@ -25,6 +26,13 @@ namespace veterianaria
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            conectandose.Conectar();
+            dtgv_CLIENTES.DataSource = conectandose.Consultar("clientes");
+            conectandose.Desconectar();
         }
     }
 }

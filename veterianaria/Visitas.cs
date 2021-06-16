@@ -12,6 +12,7 @@ namespace veterianaria
 {
     public partial class Visitas : Form
     {
+        Conexion_PostgreSQL conectandose = new Conexion_PostgreSQL();
         public Visitas()
         {
             InitializeComponent();
@@ -30,6 +31,13 @@ namespace veterianaria
         private void Visitas_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            conectandose.Conectar();
+            dtgv_VISITAS.DataSource = conectandose.Consultar("visitas");
+            conectandose.Desconectar();
         }
     }
 }
