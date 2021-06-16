@@ -29,5 +29,29 @@ namespace veterianaria
             dtgv_SERVICIOS.DataSource = conectandose.Consultar("servicios");
             conectandose.Desconectar();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (tbx_consulta_codigo.Text != "")
+            {
+                conectandose.Conectar();
+                dtgv_SERVICIOS.DataSource = conectandose.Consultar_Codigo("servicios", tbx_consulta_codigo.Text);
+                conectandose.Desconectar();
+                return;
+            }
+            else if (tbx_consulta_nombre.Text != "")
+            {
+                conectandose.Conectar();
+                dtgv_SERVICIOS.DataSource = conectandose.Consultar_Nombre("servicios", tbx_consulta_nombre.Text);
+                conectandose.Desconectar();
+                return;
+            }
+            else
+            {
+                conectandose.Conectar();
+                dtgv_SERVICIOS.DataSource = conectandose.Consultar("servicios");
+                conectandose.Desconectar();
+            }
+        }
     }
 }

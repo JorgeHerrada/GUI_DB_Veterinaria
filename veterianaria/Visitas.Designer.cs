@@ -31,8 +31,8 @@ namespace veterianaria
         {
             this.btn_exit = new System.Windows.Forms.Button();
             this.lbl_titulo = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbx_consulta_codigo = new System.Windows.Forms.TextBox();
+            this.tbx_consulta_nombre_mascota = new System.Windows.Forms.TextBox();
             this.lbl_CONSULTA_CODIGO = new System.Windows.Forms.Label();
             this.lbl_CONSULTA_NOMBRE = new System.Windows.Forms.Label();
             this.rbtn_AGREGAR = new System.Windows.Forms.RadioButton();
@@ -47,14 +47,10 @@ namespace veterianaria
             this.label4 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.tbn_CONSULTAR = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dtgv_VISITAS = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_VISITAS)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,21 +74,21 @@ namespace veterianaria
             this.lbl_titulo.TabIndex = 2;
             this.lbl_titulo.Text = "Visitas";
             // 
-            // textBox2
+            // tbx_consulta_codigo
             // 
-            this.textBox2.Location = new System.Drawing.Point(208, 235);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 27;
+            this.tbx_consulta_codigo.Location = new System.Drawing.Point(208, 235);
+            this.tbx_consulta_codigo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_consulta_codigo.Name = "tbx_consulta_codigo";
+            this.tbx_consulta_codigo.Size = new System.Drawing.Size(100, 22);
+            this.tbx_consulta_codigo.TabIndex = 27;
             // 
-            // textBox1
+            // tbx_consulta_nombre_mascota
             // 
-            this.textBox1.Location = new System.Drawing.Point(208, 187);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 26;
+            this.tbx_consulta_nombre_mascota.Location = new System.Drawing.Point(208, 187);
+            this.tbx_consulta_nombre_mascota.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_consulta_nombre_mascota.Name = "tbx_consulta_nombre_mascota";
+            this.tbx_consulta_nombre_mascota.Size = new System.Drawing.Size(100, 22);
+            this.tbx_consulta_nombre_mascota.TabIndex = 26;
             // 
             // lbl_CONSULTA_CODIGO
             // 
@@ -108,7 +104,7 @@ namespace veterianaria
             this.lbl_CONSULTA_NOMBRE.AutoSize = true;
             this.lbl_CONSULTA_NOMBRE.Location = new System.Drawing.Point(69, 190);
             this.lbl_CONSULTA_NOMBRE.Name = "lbl_CONSULTA_NOMBRE";
-            this.lbl_CONSULTA_NOMBRE.Size = new System.Drawing.Size(144, 21);
+            this.lbl_CONSULTA_NOMBRE.Size = new System.Drawing.Size(115, 17);
             this.lbl_CONSULTA_NOMBRE.TabIndex = 24;
             this.lbl_CONSULTA_NOMBRE.Text = "Nombre Mascota";
             // 
@@ -172,7 +168,7 @@ namespace veterianaria
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(980, 238);
+            this.textBox5.Location = new System.Drawing.Point(980, 189);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 22);
@@ -189,7 +185,7 @@ namespace veterianaria
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(868, 241);
+            this.label3.Location = new System.Drawing.Point(868, 192);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 17);
             this.label3.TabIndex = 44;
@@ -206,7 +202,7 @@ namespace veterianaria
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(980, 188);
+            this.textBox7.Location = new System.Drawing.Point(741, 183);
             this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 22);
@@ -215,28 +211,11 @@ namespace veterianaria
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(868, 192);
+            this.label6.Location = new System.Drawing.Point(629, 187);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 17);
             this.label6.TabIndex = 47;
             this.label6.Text = "Hora Entrada";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(741, 188);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 22);
-            this.textBox8.TabIndex = 50;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(629, 193);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 17);
-            this.label7.TabIndex = 49;
-            this.label7.Text = "Fecha";
             // 
             // button1
             // 
@@ -248,15 +227,16 @@ namespace veterianaria
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // tbn_CONSULTAR
             // 
-            this.button2.Location = new System.Drawing.Point(72, 316);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 48);
-            this.button2.TabIndex = 52;
-            this.button2.Text = "Consultar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.tbn_CONSULTAR.Location = new System.Drawing.Point(73, 281);
+            this.tbn_CONSULTAR.Margin = new System.Windows.Forms.Padding(4);
+            this.tbn_CONSULTAR.Name = "tbn_CONSULTAR";
+            this.tbn_CONSULTAR.Size = new System.Drawing.Size(164, 48);
+            this.tbn_CONSULTAR.TabIndex = 52;
+            this.tbn_CONSULTAR.Text = "Consultar";
+            this.tbn_CONSULTAR.UseVisualStyleBackColor = true;
+            this.tbn_CONSULTAR.Click += new System.EventHandler(this.tbn_CONSULTAR_Click);
             // 
             // button3
             // 
@@ -279,35 +259,15 @@ namespace veterianaria
             this.dtgv_VISITAS.Size = new System.Drawing.Size(1008, 272);
             this.dtgv_VISITAS.TabIndex = 54;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(70, 281);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 21);
-            this.label5.TabIndex = 55;
-            this.label5.Text = "Fecha";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(202, 276);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(270, 22);
-            this.dateTimePicker1.TabIndex = 57;
-            // 
             // Visitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1161, 759);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label5);
+            this.ClientSize = new System.Drawing.Size(1159, 755);
             this.Controls.Add(this.dtgv_VISITAS);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.tbn_CONSULTAR);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox5);
@@ -318,8 +278,8 @@ namespace veterianaria
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbx_consulta_codigo);
+            this.Controls.Add(this.tbx_consulta_nombre_mascota);
             this.Controls.Add(this.lbl_CONSULTA_CODIGO);
             this.Controls.Add(this.lbl_CONSULTA_NOMBRE);
             this.Controls.Add(this.rbtn_AGREGAR);
@@ -340,8 +300,8 @@ namespace veterianaria
 
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Label lbl_titulo;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbx_consulta_codigo;
+        private System.Windows.Forms.TextBox tbx_consulta_nombre_mascota;
         private System.Windows.Forms.Label lbl_CONSULTA_CODIGO;
         private System.Windows.Forms.Label lbl_CONSULTA_NOMBRE;
         private System.Windows.Forms.RadioButton rbtn_AGREGAR;
@@ -356,13 +316,9 @@ namespace veterianaria
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button tbn_CONSULTAR;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dtgv_VISITAS;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

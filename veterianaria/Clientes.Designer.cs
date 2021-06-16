@@ -36,19 +36,19 @@ namespace veterianaria
             this.lbl_CONSULTA_NOMBRE = new System.Windows.Forms.Label();
             this.lbl_CONSULTA_CODIGO = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tbx_consulta_nombre = new System.Windows.Forms.TextBox();
-            this.tbx_consulta_codigo = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbx_consultar_nombre = new System.Windows.Forms.TextBox();
+            this.tbx_consultar_codigo = new System.Windows.Forms.TextBox();
+            this.tbx_telefono = new System.Windows.Forms.TextBox();
+            this.tbx_nombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbx_email = new System.Windows.Forms.TextBox();
+            this.tbx_apellido = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.tbx_direccion = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_AGREGAR = new System.Windows.Forms.Button();
             this.CONSULTAR = new System.Windows.Forms.Button();
             this.btn_CONSULTAR_TODO = new System.Windows.Forms.Button();
             this.dtgv_CLIENTES = new System.Windows.Forms.DataGridView();
@@ -123,41 +123,41 @@ namespace veterianaria
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1296, 38);
+            this.menuStrip1.Size = new System.Drawing.Size(1037, 24);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // tbx_consulta_nombre
+            // tbx_consultar_nombre
             // 
-            this.tbx_consulta_nombre.Location = new System.Drawing.Point(147, 158);
-            this.tbx_consulta_nombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbx_consulta_nombre.Name = "tbx_consulta_nombre";
-            this.tbx_consulta_nombre.Size = new System.Drawing.Size(100, 22);
-            this.tbx_consulta_nombre.TabIndex = 8;
+            this.tbx_consultar_nombre.Location = new System.Drawing.Point(147, 158);
+            this.tbx_consultar_nombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_consultar_nombre.Name = "tbx_consultar_nombre";
+            this.tbx_consultar_nombre.Size = new System.Drawing.Size(100, 22);
+            this.tbx_consultar_nombre.TabIndex = 8;
             // 
-            // tbx_consulta_codigo
+            // tbx_consultar_codigo
             // 
-            this.tbx_consulta_codigo.Location = new System.Drawing.Point(147, 206);
-            this.tbx_consulta_codigo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbx_consulta_codigo.Name = "tbx_consulta_codigo";
-            this.tbx_consulta_codigo.Size = new System.Drawing.Size(100, 22);
-            this.tbx_consulta_codigo.TabIndex = 9;
+            this.tbx_consultar_codigo.Location = new System.Drawing.Point(147, 206);
+            this.tbx_consultar_codigo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_consultar_codigo.Name = "tbx_consultar_codigo";
+            this.tbx_consultar_codigo.Size = new System.Drawing.Size(100, 22);
+            this.tbx_consultar_codigo.TabIndex = 9;
             // 
-            // textBox3
+            // tbx_telefono
             // 
-            this.textBox3.Location = new System.Drawing.Point(483, 206);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(201, 22);
-            this.textBox3.TabIndex = 13;
+            this.tbx_telefono.Location = new System.Drawing.Point(483, 206);
+            this.tbx_telefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_telefono.Name = "tbx_telefono";
+            this.tbx_telefono.Size = new System.Drawing.Size(201, 22);
+            this.tbx_telefono.TabIndex = 13;
             // 
-            // textBox4
+            // tbx_nombre
             // 
-            this.textBox4.Location = new System.Drawing.Point(483, 160);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(201, 22);
-            this.textBox4.TabIndex = 12;
+            this.tbx_nombre.Location = new System.Drawing.Point(483, 160);
+            this.tbx_nombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_nombre.Name = "tbx_nombre";
+            this.tbx_nombre.Size = new System.Drawing.Size(201, 22);
+            this.tbx_nombre.TabIndex = 12;
             // 
             // label1
             // 
@@ -177,22 +177,22 @@ namespace veterianaria
             this.label2.TabIndex = 10;
             this.label2.Text = "Nombre";
             // 
-            // textBox5
+            // tbx_email
             // 
-            this.textBox5.Location = new System.Drawing.Point(795, 210);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(193, 22);
-            this.textBox5.TabIndex = 17;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.tbx_email.Location = new System.Drawing.Point(795, 210);
+            this.tbx_email.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_email.Name = "tbx_email";
+            this.tbx_email.Size = new System.Drawing.Size(193, 22);
+            this.tbx_email.TabIndex = 17;
+            this.tbx_email.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
-            // textBox6
+            // tbx_apellido
             // 
-            this.textBox6.Location = new System.Drawing.Point(795, 162);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(193, 22);
-            this.textBox6.TabIndex = 16;
+            this.tbx_apellido.Location = new System.Drawing.Point(795, 162);
+            this.tbx_apellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_apellido.Name = "tbx_apellido";
+            this.tbx_apellido.Size = new System.Drawing.Size(193, 22);
+            this.tbx_apellido.TabIndex = 16;
             // 
             // label3
             // 
@@ -212,13 +212,13 @@ namespace veterianaria
             this.label4.TabIndex = 14;
             this.label4.Text = "Apellido";
             // 
-            // textBox8
+            // tbx_direccion
             // 
-            this.textBox8.Location = new System.Drawing.Point(483, 249);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(201, 22);
-            this.textBox8.TabIndex = 20;
+            this.tbx_direccion.Location = new System.Drawing.Point(483, 249);
+            this.tbx_direccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_direccion.Name = "tbx_direccion";
+            this.tbx_direccion.Size = new System.Drawing.Size(201, 22);
+            this.tbx_direccion.TabIndex = 20;
             // 
             // label6
             // 
@@ -229,15 +229,16 @@ namespace veterianaria
             this.label6.TabIndex = 18;
             this.label6.Text = "Dirección";
             // 
-            // button1
+            // btn_AGREGAR
             // 
-            this.button1.Location = new System.Drawing.Point(825, 249);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(164, 48);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_AGREGAR.Location = new System.Drawing.Point(825, 249);
+            this.btn_AGREGAR.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_AGREGAR.Name = "btn_AGREGAR";
+            this.btn_AGREGAR.Size = new System.Drawing.Size(164, 48);
+            this.btn_AGREGAR.TabIndex = 22;
+            this.btn_AGREGAR.Text = "Agregar";
+            this.btn_AGREGAR.UseVisualStyleBackColor = true;
+            this.btn_AGREGAR.Click += new System.EventHandler(this.btn_AGREGAR_Click);
             // 
             // CONSULTAR
             // 
@@ -279,19 +280,19 @@ namespace veterianaria
             this.Controls.Add(this.dtgv_CLIENTES);
             this.Controls.Add(this.btn_CONSULTAR_TODO);
             this.Controls.Add(this.CONSULTAR);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.btn_AGREGAR);
+            this.Controls.Add(this.tbx_direccion);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.tbx_email);
+            this.Controls.Add(this.tbx_apellido);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbx_telefono);
+            this.Controls.Add(this.tbx_nombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tbx_consulta_codigo);
-            this.Controls.Add(this.tbx_consulta_nombre);
+            this.Controls.Add(this.tbx_consultar_codigo);
+            this.Controls.Add(this.tbx_consultar_nombre);
             this.Controls.Add(this.lbl_CONSULTA_CODIGO);
             this.Controls.Add(this.lbl_CONSULTA_NOMBRE);
             this.Controls.Add(this.rbtn_AGREGAR);
@@ -319,19 +320,19 @@ namespace veterianaria
         private System.Windows.Forms.Label lbl_CONSULTA_NOMBRE;
         private System.Windows.Forms.Label lbl_CONSULTA_CODIGO;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.TextBox tbx_consulta_nombre;
-        private System.Windows.Forms.TextBox tbx_consulta_codigo;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbx_consultar_nombre;
+        private System.Windows.Forms.TextBox tbx_consultar_codigo;
+        private System.Windows.Forms.TextBox tbx_telefono;
+        private System.Windows.Forms.TextBox tbx_nombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbx_email;
+        private System.Windows.Forms.TextBox tbx_apellido;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox tbx_direccion;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_AGREGAR;
         private System.Windows.Forms.Button CONSULTAR;
         private System.Windows.Forms.Button btn_CONSULTAR_TODO;
         private System.Windows.Forms.DataGridView dtgv_CLIENTES;

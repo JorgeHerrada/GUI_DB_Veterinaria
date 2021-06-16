@@ -29,5 +29,29 @@ namespace veterianaria
             dtgv_PRODUCTOS.DataSource = conectandose.Consultar("productos");
             conectandose.Desconectar();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (tbx_consulta_codigo.Text != "")
+            {
+                conectandose.Conectar();
+                dtgv_PRODUCTOS.DataSource = conectandose.Consultar_Codigo("productos", tbx_consulta_codigo.Text);
+                conectandose.Desconectar();
+                return;
+            }
+            else if (tbx_consulta_nombre.Text != "")
+            {
+                conectandose.Conectar();
+                dtgv_PRODUCTOS.DataSource = conectandose.Consultar_Nombre("productos", tbx_consulta_nombre.Text);
+                conectandose.Desconectar();
+                return;
+            }
+            else
+            {
+                conectandose.Conectar();
+                dtgv_PRODUCTOS.DataSource = conectandose.Consultar("productos");
+                conectandose.Desconectar();
+            }
+        }
     }
 }

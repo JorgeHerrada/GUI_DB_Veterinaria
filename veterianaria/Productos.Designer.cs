@@ -31,28 +31,26 @@ namespace veterianaria
         {
             this.btn_EXIT = new System.Windows.Forms.Button();
             this.lbl_titulo = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.tbx_precio_venta = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbx_existencias = new System.Windows.Forms.TextBox();
+            this.tbx_proveedor = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbx_precio_compra = new System.Windows.Forms.TextBox();
+            this.tbx_nombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbx_consulta_codigo = new System.Windows.Forms.TextBox();
+            this.tbx_consulta_nombre = new System.Windows.Forms.TextBox();
             this.lbl_CONSULTA_CODIGO = new System.Windows.Forms.Label();
             this.lbl_CONSULTA_NOMBRE = new System.Windows.Forms.Label();
             this.rbtn_AGREGAR = new System.Windows.Forms.RadioButton();
             this.rbtn_CONSULTAR = new System.Windows.Forms.RadioButton();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tbx_servicio = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_AGREGAR = new System.Windows.Forms.Button();
+            this.btn_CONSULTAR = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dtgv_PRODUCTOS = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_PRODUCTOS)).BeginInit();
@@ -78,13 +76,13 @@ namespace veterianaria
             this.lbl_titulo.TabIndex = 1;
             this.lbl_titulo.Text = "Productos";
             // 
-            // textBox8
+            // tbx_precio_venta
             // 
-            this.textBox8.Location = new System.Drawing.Point(527, 286);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(187, 22);
-            this.textBox8.TabIndex = 37;
+            this.tbx_precio_venta.Location = new System.Drawing.Point(527, 286);
+            this.tbx_precio_venta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_precio_venta.Name = "tbx_precio_venta";
+            this.tbx_precio_venta.Size = new System.Drawing.Size(187, 22);
+            this.tbx_precio_venta.TabIndex = 37;
             // 
             // label6
             // 
@@ -95,21 +93,21 @@ namespace veterianaria
             this.label6.TabIndex = 36;
             this.label6.Text = "Precio de Venta";
             // 
-            // textBox5
+            // tbx_existencias
             // 
-            this.textBox5.Location = new System.Drawing.Point(825, 247);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(193, 22);
-            this.textBox5.TabIndex = 35;
+            this.tbx_existencias.Location = new System.Drawing.Point(825, 247);
+            this.tbx_existencias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_existencias.Name = "tbx_existencias";
+            this.tbx_existencias.Size = new System.Drawing.Size(193, 22);
+            this.tbx_existencias.TabIndex = 35;
             // 
-            // textBox6
+            // tbx_proveedor
             // 
-            this.textBox6.Location = new System.Drawing.Point(825, 199);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(193, 22);
-            this.textBox6.TabIndex = 34;
+            this.tbx_proveedor.Location = new System.Drawing.Point(825, 199);
+            this.tbx_proveedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_proveedor.Name = "tbx_proveedor";
+            this.tbx_proveedor.Size = new System.Drawing.Size(193, 22);
+            this.tbx_proveedor.TabIndex = 34;
             // 
             // label3
             // 
@@ -129,21 +127,21 @@ namespace veterianaria
             this.label4.TabIndex = 32;
             this.label4.Text = "Proveedor";
             // 
-            // textBox3
+            // tbx_precio_compra
             // 
-            this.textBox3.Location = new System.Drawing.Point(527, 242);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(187, 22);
-            this.textBox3.TabIndex = 31;
+            this.tbx_precio_compra.Location = new System.Drawing.Point(527, 242);
+            this.tbx_precio_compra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_precio_compra.Name = "tbx_precio_compra";
+            this.tbx_precio_compra.Size = new System.Drawing.Size(187, 22);
+            this.tbx_precio_compra.TabIndex = 31;
             // 
-            // textBox4
+            // tbx_nombre
             // 
-            this.textBox4.Location = new System.Drawing.Point(527, 196);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(187, 22);
-            this.textBox4.TabIndex = 30;
+            this.tbx_nombre.Location = new System.Drawing.Point(527, 196);
+            this.tbx_nombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_nombre.Name = "tbx_nombre";
+            this.tbx_nombre.Size = new System.Drawing.Size(187, 22);
+            this.tbx_nombre.TabIndex = 30;
             // 
             // label1
             // 
@@ -163,21 +161,21 @@ namespace veterianaria
             this.label2.TabIndex = 28;
             this.label2.Text = "Nombre";
             // 
-            // textBox2
+            // tbx_consulta_codigo
             // 
-            this.textBox2.Location = new System.Drawing.Point(176, 242);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 27;
+            this.tbx_consulta_codigo.Location = new System.Drawing.Point(176, 242);
+            this.tbx_consulta_codigo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_consulta_codigo.Name = "tbx_consulta_codigo";
+            this.tbx_consulta_codigo.Size = new System.Drawing.Size(100, 22);
+            this.tbx_consulta_codigo.TabIndex = 27;
             // 
-            // textBox1
+            // tbx_consulta_nombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(176, 193);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 26;
+            this.tbx_consulta_nombre.Location = new System.Drawing.Point(176, 193);
+            this.tbx_consulta_nombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_consulta_nombre.Name = "tbx_consulta_nombre";
+            this.tbx_consulta_nombre.Size = new System.Drawing.Size(100, 22);
+            this.tbx_consulta_nombre.TabIndex = 26;
             // 
             // lbl_CONSULTA_CODIGO
             // 
@@ -221,59 +219,43 @@ namespace veterianaria
             this.rbtn_CONSULTAR.Text = "Consultar";
             this.rbtn_CONSULTAR.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // tbx_servicio
             // 
-            this.textBox7.Location = new System.Drawing.Point(527, 331);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(187, 22);
-            this.textBox7.TabIndex = 40;
+            this.tbx_servicio.Location = new System.Drawing.Point(825, 286);
+            this.tbx_servicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_servicio.Name = "tbx_servicio";
+            this.tbx_servicio.Size = new System.Drawing.Size(193, 22);
+            this.tbx_servicio.TabIndex = 40;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(400, 331);
+            this.label7.Location = new System.Drawing.Point(735, 286);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 17);
             this.label7.TabIndex = 39;
             this.label7.Text = "Servicio";
             // 
-            // textBox9
+            // btn_AGREGAR
             // 
-            this.textBox9.Location = new System.Drawing.Point(825, 286);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(193, 22);
-            this.textBox9.TabIndex = 42;
+            this.btn_AGREGAR.Location = new System.Drawing.Point(854, 324);
+            this.btn_AGREGAR.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_AGREGAR.Name = "btn_AGREGAR";
+            this.btn_AGREGAR.Size = new System.Drawing.Size(164, 48);
+            this.btn_AGREGAR.TabIndex = 43;
+            this.btn_AGREGAR.Text = "Agregar";
+            this.btn_AGREGAR.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // btn_CONSULTAR
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(735, 288);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 17);
-            this.label8.TabIndex = 41;
-            this.label8.Text = "Proveedor";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(825, 331);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(164, 48);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(68, 308);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 48);
-            this.button2.TabIndex = 44;
-            this.button2.Text = "Consultar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_CONSULTAR.Location = new System.Drawing.Point(67, 324);
+            this.btn_CONSULTAR.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_CONSULTAR.Name = "btn_CONSULTAR";
+            this.btn_CONSULTAR.Size = new System.Drawing.Size(164, 48);
+            this.btn_CONSULTAR.TabIndex = 44;
+            this.btn_CONSULTAR.Text = "Consultar";
+            this.btn_CONSULTAR.UseVisualStyleBackColor = true;
+            this.btn_CONSULTAR.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -303,24 +285,22 @@ namespace veterianaria
             this.ClientSize = new System.Drawing.Size(1083, 752);
             this.Controls.Add(this.dtgv_PRODUCTOS);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.btn_CONSULTAR);
+            this.Controls.Add(this.btn_AGREGAR);
+            this.Controls.Add(this.tbx_servicio);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.tbx_precio_venta);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.tbx_existencias);
+            this.Controls.Add(this.tbx_proveedor);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbx_precio_compra);
+            this.Controls.Add(this.tbx_nombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbx_consulta_codigo);
+            this.Controls.Add(this.tbx_consulta_nombre);
             this.Controls.Add(this.lbl_CONSULTA_CODIGO);
             this.Controls.Add(this.lbl_CONSULTA_NOMBRE);
             this.Controls.Add(this.rbtn_AGREGAR);
@@ -340,28 +320,26 @@ namespace veterianaria
 
         private System.Windows.Forms.Button btn_EXIT;
         private System.Windows.Forms.Label lbl_titulo;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox tbx_precio_venta;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbx_existencias;
+        private System.Windows.Forms.TextBox tbx_proveedor;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbx_precio_compra;
+        private System.Windows.Forms.TextBox tbx_nombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbx_consulta_codigo;
+        private System.Windows.Forms.TextBox tbx_consulta_nombre;
         private System.Windows.Forms.Label lbl_CONSULTA_CODIGO;
         private System.Windows.Forms.Label lbl_CONSULTA_NOMBRE;
         private System.Windows.Forms.RadioButton rbtn_AGREGAR;
         private System.Windows.Forms.RadioButton rbtn_CONSULTAR;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tbx_servicio;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_AGREGAR;
+        private System.Windows.Forms.Button btn_CONSULTAR;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dtgv_PRODUCTOS;
     }

@@ -39,5 +39,29 @@ namespace veterianaria
             dtgv_VISITAS.DataSource = conectandose.Consultar("visitas");
             conectandose.Desconectar();
         }
+
+        private void tbn_CONSULTAR_Click(object sender, EventArgs e)
+        {
+            if (tbx_consulta_codigo.Text != "")
+            {
+                conectandose.Conectar();
+                dtgv_VISITAS.DataSource = conectandose.Consultar_Codigo("mascotas", tbx_consulta_codigo.Text);
+                conectandose.Desconectar();
+                return;
+            }
+            else if (tbx_consulta_nombre_mascota.Text != "")
+            {
+                conectandose.Conectar();
+                dtgv_VISITAS.DataSource = conectandose.Consultar_Nombre_Mascota(tbx_consulta_nombre_mascota.Text);
+                conectandose.Desconectar();
+                return;
+            }
+            else
+            {
+                conectandose.Conectar();
+                dtgv_VISITAS.DataSource = conectandose.Consultar("mascotas");
+                conectandose.Desconectar();
+            }
+        }
     }
 }
