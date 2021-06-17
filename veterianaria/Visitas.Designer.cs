@@ -37,17 +37,15 @@ namespace veterianaria
             this.lbl_CONSULTA_NOMBRE = new System.Windows.Forms.Label();
             this.rbtn_AGREGAR = new System.Windows.Forms.RadioButton();
             this.rbtn_CONSULTAR = new System.Windows.Forms.RadioButton();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbx_codigo_servicio = new System.Windows.Forms.TextBox();
+            this.tbx_codigo_mascota = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbx_codigo_cliente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_AGREGAR = new System.Windows.Forms.Button();
             this.tbn_CONSULTAR = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dtgv_VISITAS = new System.Windows.Forms.DataGridView();
@@ -122,13 +120,14 @@ namespace veterianaria
             this.rbtn_AGREGAR.Name = "rbtn_AGREGAR";
             this.rbtn_AGREGAR.Size = new System.Drawing.Size(80, 21);
             this.rbtn_AGREGAR.TabIndex = 23;
-            this.rbtn_AGREGAR.TabStop = true;
             this.rbtn_AGREGAR.Text = "Agregar";
             this.rbtn_AGREGAR.UseVisualStyleBackColor = true;
+            this.rbtn_AGREGAR.CheckedChanged += new System.EventHandler(this.rbtn_AGREGAR_CheckedChanged);
             // 
             // rbtn_CONSULTAR
             // 
             this.rbtn_CONSULTAR.AutoSize = true;
+            this.rbtn_CONSULTAR.Checked = true;
             this.rbtn_CONSULTAR.Location = new System.Drawing.Point(73, 128);
             this.rbtn_CONSULTAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtn_CONSULTAR.Name = "rbtn_CONSULTAR";
@@ -137,26 +136,27 @@ namespace veterianaria
             this.rbtn_CONSULTAR.TabStop = true;
             this.rbtn_CONSULTAR.Text = "Consultar";
             this.rbtn_CONSULTAR.UseVisualStyleBackColor = true;
+            this.rbtn_CONSULTAR.CheckedChanged += new System.EventHandler(this.rbtn_CONSULTAR_CheckedChanged);
             // 
-            // textBox3
+            // tbx_codigo_servicio
             // 
-            this.textBox3.Location = new System.Drawing.Point(523, 231);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 42;
-            this.textBox3.Text = "0";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbx_codigo_servicio.Location = new System.Drawing.Point(523, 231);
+            this.tbx_codigo_servicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_codigo_servicio.Name = "tbx_codigo_servicio";
+            this.tbx_codigo_servicio.Size = new System.Drawing.Size(100, 22);
+            this.tbx_codigo_servicio.TabIndex = 42;
+            this.tbx_codigo_servicio.Text = "0";
+            this.tbx_codigo_servicio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox4
+            // tbx_codigo_mascota
             // 
-            this.textBox4.Location = new System.Drawing.Point(523, 182);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 41;
-            this.textBox4.Text = "0";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbx_codigo_mascota.Location = new System.Drawing.Point(523, 182);
+            this.tbx_codigo_mascota.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_codigo_mascota.Name = "tbx_codigo_mascota";
+            this.tbx_codigo_mascota.Size = new System.Drawing.Size(100, 22);
+            this.tbx_codigo_mascota.TabIndex = 41;
+            this.tbx_codigo_mascota.Text = "0";
+            this.tbx_codigo_mascota.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 
@@ -176,23 +176,15 @@ namespace veterianaria
             this.label2.TabIndex = 39;
             this.label2.Text = "Código Mascota";
             // 
-            // textBox5
+            // tbx_codigo_cliente
             // 
-            this.textBox5.Location = new System.Drawing.Point(665, 52);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(102, 22);
-            this.textBox5.TabIndex = 46;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(523, 276);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 45;
-            this.textBox6.Text = "0";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbx_codigo_cliente.Location = new System.Drawing.Point(523, 276);
+            this.tbx_codigo_cliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbx_codigo_cliente.Name = "tbx_codigo_cliente";
+            this.tbx_codigo_cliente.Size = new System.Drawing.Size(100, 22);
+            this.tbx_codigo_cliente.TabIndex = 45;
+            this.tbx_codigo_cliente.Text = "0";
+            this.tbx_codigo_cliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
             // 
@@ -212,14 +204,6 @@ namespace veterianaria
             this.label4.TabIndex = 43;
             this.label4.Text = "Código Cliente";
             // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(667, 11);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 48;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -229,16 +213,16 @@ namespace veterianaria
             this.label6.TabIndex = 47;
             this.label6.Text = "Hora Entrada";
             // 
-            // button1
+            // btn_AGREGAR
             // 
-            this.button1.Location = new System.Drawing.Point(917, 281);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(164, 48);
-            this.button1.TabIndex = 51;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_AGREGAR.Location = new System.Drawing.Point(917, 281);
+            this.btn_AGREGAR.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_AGREGAR.Name = "btn_AGREGAR";
+            this.btn_AGREGAR.Size = new System.Drawing.Size(164, 48);
+            this.btn_AGREGAR.TabIndex = 51;
+            this.btn_AGREGAR.Text = "Agregar";
+            this.btn_AGREGAR.UseVisualStyleBackColor = true;
+            this.btn_AGREGAR.Click += new System.EventHandler(this.button1_Click);
             // 
             // tbn_CONSULTAR
             // 
@@ -274,16 +258,16 @@ namespace veterianaria
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(813, 180);
+            this.dateTimePicker1.Location = new System.Drawing.Point(794, 180);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(287, 22);
             this.dateTimePicker1.TabIndex = 55;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(813, 235);
+            this.dateTimePicker2.Location = new System.Drawing.Point(794, 229);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker2.Size = new System.Drawing.Size(287, 22);
             this.dateTimePicker2.TabIndex = 56;
             // 
             // rbtn_Eliminar
@@ -294,20 +278,20 @@ namespace veterianaria
             this.rbtn_Eliminar.Name = "rbtn_Eliminar";
             this.rbtn_Eliminar.Size = new System.Drawing.Size(79, 21);
             this.rbtn_Eliminar.TabIndex = 57;
-            this.rbtn_Eliminar.TabStop = true;
             this.rbtn_Eliminar.Text = "Eliminar";
             this.rbtn_Eliminar.UseVisualStyleBackColor = true;
+            this.rbtn_Eliminar.CheckedChanged += new System.EventHandler(this.rbtn_Eliminar_CheckedChanged);
             // 
             // rbtn_MODIFICAR
             // 
             this.rbtn_MODIFICAR.AutoSize = true;
-            this.rbtn_MODIFICAR.Location = new System.Drawing.Point(870, 128);
+            this.rbtn_MODIFICAR.Location = new System.Drawing.Point(938, 128);
             this.rbtn_MODIFICAR.Name = "rbtn_MODIFICAR";
             this.rbtn_MODIFICAR.Size = new System.Drawing.Size(143, 21);
             this.rbtn_MODIFICAR.TabIndex = 58;
-            this.rbtn_MODIFICAR.TabStop = true;
             this.rbtn_MODIFICAR.Text = "Modificar Registro";
             this.rbtn_MODIFICAR.UseVisualStyleBackColor = true;
+            this.rbtn_MODIFICAR.CheckedChanged += new System.EventHandler(this.rbtn_MODIFICAR_CheckedChanged);
             // 
             // Visitas
             // 
@@ -321,15 +305,13 @@ namespace veterianaria
             this.Controls.Add(this.dtgv_VISITAS);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.tbn_CONSULTAR);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.btn_AGREGAR);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.tbx_codigo_cliente);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbx_codigo_servicio);
+            this.Controls.Add(this.tbx_codigo_mascota);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbx_consulta_codigo);
@@ -360,17 +342,15 @@ namespace veterianaria
         private System.Windows.Forms.Label lbl_CONSULTA_NOMBRE;
         private System.Windows.Forms.RadioButton rbtn_AGREGAR;
         private System.Windows.Forms.RadioButton rbtn_CONSULTAR;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbx_codigo_servicio;
+        private System.Windows.Forms.TextBox tbx_codigo_mascota;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbx_codigo_cliente;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_AGREGAR;
         private System.Windows.Forms.Button tbn_CONSULTAR;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dtgv_VISITAS;

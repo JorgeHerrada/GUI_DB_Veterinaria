@@ -173,5 +173,19 @@ namespace veterianaria
 
             System.Windows.Forms.MessageBox.Show("AGREGADO CORRECTAMENTE", "SUCCESSFULLY INSERTED");
         }
+
+        // Metodo para insertar en tabla SERVICIOS
+        public void Insertar_VISITAS(int id_servicio, int id_mascota, int id_cliente, string entrada, string salida)
+        {
+            // declaramos el query
+            string query = "INSERT into visitas(id_servicio,id_mascota,id_cliente,hora_entrada,hora_salida)"
+                + " VALUES(" + id_servicio + "," + id_mascota + "," + id_cliente + ",'" + entrada + "','" + salida + "')";
+
+            // Ejecutamos comando, mandamos el query y la connexion
+            NpgsqlCommand ejecutor = new NpgsqlCommand(query, conn);
+            ejecutor.ExecuteNonQuery();
+
+            System.Windows.Forms.MessageBox.Show("AGREGADO CORRECTAMENTE", "SUCCESSFULLY INSERTED");
+        }
     }
 }
