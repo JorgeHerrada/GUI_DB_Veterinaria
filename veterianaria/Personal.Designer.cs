@@ -63,12 +63,14 @@ namespace veterianaria
             this.dtgv_PERSONAL = new System.Windows.Forms.DataGridView();
             this.rbtn_Eliminar = new System.Windows.Forms.RadioButton();
             this.rbtn_MODIFICAR = new System.Windows.Forms.RadioButton();
+            this.btn_MODIFICAR = new System.Windows.Forms.Button();
+            this.btn_ELIMINAR = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_PERSONAL)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_exit
             // 
-            this.btn_exit.Location = new System.Drawing.Point(900, 639);
+            this.btn_exit.Location = new System.Drawing.Point(900, 794);
             this.btn_exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(132, 39);
@@ -125,7 +127,7 @@ namespace veterianaria
             // rbtn_AGREGAR
             // 
             this.rbtn_AGREGAR.AutoSize = true;
-            this.rbtn_AGREGAR.Location = new System.Drawing.Point(415, 124);
+            this.rbtn_AGREGAR.Location = new System.Drawing.Point(610, 126);
             this.rbtn_AGREGAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtn_AGREGAR.Name = "rbtn_AGREGAR";
             this.rbtn_AGREGAR.Size = new System.Drawing.Size(80, 21);
@@ -324,7 +326,7 @@ namespace veterianaria
             // 
             // btn_AGREGAR
             // 
-            this.btn_AGREGAR.Location = new System.Drawing.Point(868, 398);
+            this.btn_AGREGAR.Location = new System.Drawing.Point(610, 398);
             this.btn_AGREGAR.Margin = new System.Windows.Forms.Padding(4);
             this.btn_AGREGAR.Name = "btn_AGREGAR";
             this.btn_AGREGAR.Size = new System.Drawing.Size(164, 48);
@@ -335,7 +337,7 @@ namespace veterianaria
             // 
             // btn_CONSULTAR
             // 
-            this.btn_CONSULTAR.Location = new System.Drawing.Point(79, 282);
+            this.btn_CONSULTAR.Location = new System.Drawing.Point(79, 398);
             this.btn_CONSULTAR.Margin = new System.Windows.Forms.Padding(4);
             this.btn_CONSULTAR.Name = "btn_CONSULTAR";
             this.btn_CONSULTAR.Size = new System.Drawing.Size(164, 48);
@@ -346,7 +348,7 @@ namespace veterianaria
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(80, 635);
+            this.button3.Location = new System.Drawing.Point(80, 790);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(164, 48);
@@ -358,17 +360,17 @@ namespace veterianaria
             // dtgv_PERSONAL
             // 
             this.dtgv_PERSONAL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgv_PERSONAL.Location = new System.Drawing.Point(80, 453);
+            this.dtgv_PERSONAL.Location = new System.Drawing.Point(80, 490);
             this.dtgv_PERSONAL.Name = "dtgv_PERSONAL";
             this.dtgv_PERSONAL.RowHeadersWidth = 51;
             this.dtgv_PERSONAL.RowTemplate.Height = 24;
-            this.dtgv_PERSONAL.Size = new System.Drawing.Size(952, 175);
+            this.dtgv_PERSONAL.Size = new System.Drawing.Size(952, 277);
             this.dtgv_PERSONAL.TabIndex = 70;
             // 
             // rbtn_Eliminar
             // 
             this.rbtn_Eliminar.AutoSize = true;
-            this.rbtn_Eliminar.Location = new System.Drawing.Point(209, 126);
+            this.rbtn_Eliminar.Location = new System.Drawing.Point(342, 126);
             this.rbtn_Eliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtn_Eliminar.Name = "rbtn_Eliminar";
             this.rbtn_Eliminar.Size = new System.Drawing.Size(79, 21);
@@ -381,7 +383,7 @@ namespace veterianaria
             // rbtn_MODIFICAR
             // 
             this.rbtn_MODIFICAR.AutoSize = true;
-            this.rbtn_MODIFICAR.Location = new System.Drawing.Point(887, 126);
+            this.rbtn_MODIFICAR.Location = new System.Drawing.Point(866, 126);
             this.rbtn_MODIFICAR.Name = "rbtn_MODIFICAR";
             this.rbtn_MODIFICAR.Size = new System.Drawing.Size(143, 21);
             this.rbtn_MODIFICAR.TabIndex = 72;
@@ -389,11 +391,34 @@ namespace veterianaria
             this.rbtn_MODIFICAR.UseVisualStyleBackColor = true;
             this.rbtn_MODIFICAR.CheckedChanged += new System.EventHandler(this.rbtn_MODIFICAR_CheckedChanged);
             // 
+            // btn_MODIFICAR
+            // 
+            this.btn_MODIFICAR.Location = new System.Drawing.Point(866, 398);
+            this.btn_MODIFICAR.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_MODIFICAR.Name = "btn_MODIFICAR";
+            this.btn_MODIFICAR.Size = new System.Drawing.Size(164, 48);
+            this.btn_MODIFICAR.TabIndex = 74;
+            this.btn_MODIFICAR.Text = "Modificar";
+            this.btn_MODIFICAR.UseVisualStyleBackColor = true;
+            // 
+            // btn_ELIMINAR
+            // 
+            this.btn_ELIMINAR.Location = new System.Drawing.Point(342, 398);
+            this.btn_ELIMINAR.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_ELIMINAR.Name = "btn_ELIMINAR";
+            this.btn_ELIMINAR.Size = new System.Drawing.Size(164, 48);
+            this.btn_ELIMINAR.TabIndex = 73;
+            this.btn_ELIMINAR.Text = "Eliminar";
+            this.btn_ELIMINAR.UseVisualStyleBackColor = true;
+            this.btn_ELIMINAR.Click += new System.EventHandler(this.btn_ELIMINAR_Click);
+            // 
             // Personal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1121, 706);
+            this.ClientSize = new System.Drawing.Size(1121, 865);
+            this.Controls.Add(this.btn_MODIFICAR);
+            this.Controls.Add(this.btn_ELIMINAR);
             this.Controls.Add(this.rbtn_MODIFICAR);
             this.Controls.Add(this.rbtn_Eliminar);
             this.Controls.Add(this.dtgv_PERSONAL);
@@ -474,5 +499,7 @@ namespace veterianaria
         private System.Windows.Forms.DataGridView dtgv_PERSONAL;
         private System.Windows.Forms.RadioButton rbtn_Eliminar;
         private System.Windows.Forms.RadioButton rbtn_MODIFICAR;
+        private System.Windows.Forms.Button btn_MODIFICAR;
+        private System.Windows.Forms.Button btn_ELIMINAR;
     }
 }

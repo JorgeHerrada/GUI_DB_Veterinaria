@@ -174,5 +174,22 @@ namespace veterianaria
                 tbx_existencias.Enabled = true;
             }
         }
+
+        private void btn_ELIMINAR_Click(object sender, EventArgs e)
+        {
+            conectandose.Conectar(); // Connectamos a la DB
+
+            // Mandamos información de las cajas
+            conectandose.Eliminar("productos", Convert.ToInt32(tbx_consulta_codigo.Text));
+
+            // Actualización del DataGridView (OPCIONAL)
+            dtgv_PRODUCTOS.DataSource = conectandose.Consultar("productos");
+
+            // Limpieza de TextBox
+            tbx_consulta_codigo.Text = "0";
+
+
+            conectandose.Desconectar(); // Desconectamos de la DB
+        }
     }
 }

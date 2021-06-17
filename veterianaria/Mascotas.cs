@@ -175,5 +175,22 @@ namespace veterianaria
                 tbx_edad.Enabled = true;
             }
         }
+
+        private void btn_ELIMINAR_Click(object sender, EventArgs e)
+        {
+            conectandose.Conectar(); // Connectamos a la DB
+
+            // Mandamos información de las cajas
+            conectandose.Eliminar("mascotas", Convert.ToInt32(tbx_consultar_codigo.Text));
+
+            // Actualización del DataGridView (OPCIONAL)
+            dtgv_MASCOTAS.DataSource = conectandose.Consultar("mascotas");
+
+            // Limpieza de TextBox
+            tbx_consultar_codigo.Text = "0";
+
+
+            conectandose.Desconectar(); // Desconectamos de la DB
+        }
     }
 }

@@ -187,5 +187,16 @@ namespace veterianaria
 
             System.Windows.Forms.MessageBox.Show("AGREGADO CORRECTAMENTE", "SUCCESSFULLY INSERTED");
         }
+
+        public void Eliminar(string nombre_tabla, int id)
+        {
+            string query = "delete from " + nombre_tabla + " where id = " + id;
+
+            NpgsqlCommand ejecutor = new NpgsqlCommand(query,conn);
+            ejecutor.ExecuteNonQuery();
+
+            System.Windows.Forms.MessageBox.Show("ELIMINADO CORRECTAMENTE", "SUCCESSFULLY DELETED");
+
+        }
     }
 }
