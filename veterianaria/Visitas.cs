@@ -109,7 +109,7 @@ namespace veterianaria
             tbx_codigo_cliente.Text = "0";
 
             conectandose.Desconectar(); // Desconectamos de la DB
-            
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -190,6 +190,44 @@ namespace veterianaria
             // Limpieza de TextBox
             tbx_consulta_codigo.Text = "0";
 
+
+            conectandose.Desconectar(); // Desconectamos de la DB
+        }
+
+        private void btn_MODIFICAR_Click(object sender, EventArgs e)
+        {
+            conectandose.Conectar(); // Connectamos a la DB
+
+            // Verificamos que la menos tengamos nombre y apellido
+            if (tbx_codigo_mascota.Text == "" || tbx_codigo_mascota.Text == "0")
+            {
+                MessageBox.Show("Necesitas al menos el codigo de la mascota.", "¡ERROR!");
+                return;
+            }
+            else if (tbx_consulta_codigo.Text == "0" || tbx_consulta_codigo.Text == "")
+            {
+                MessageBox.Show("Para modificar datos de la VISITA necesitas el codigo de la misma.", "¡ERROR!");
+                return;
+            }
+
+            // Mandamos información de las cajas
+            conectandose.Update_VISITAS(
+                Convert.ToInt32(tbx_consulta_codigo.Text),
+                Convert.ToInt32(tbx_codigo_servicio.Text),
+                Convert.ToInt32(tbx_codigo_mascota.Text),
+                Convert.ToInt32(tbx_codigo_cliente.Text),
+                dateTimePicker1.Text,
+                dateTimePicker2.Text
+                );
+
+            // Actualización del DataGridView (OPCIONAL)
+            dtgv_VISITAS.DataSource = conectandose.Consultar("visitas");
+
+            // Limpieza de TextBox
+            tbx_consulta_codigo.Text = "0"
+            tbx_codigo_servicio.Text = "0";
+            tbx_codigo_mascota.Text = "0";
+            tbx_codigo_cliente.Text = "0";
 
             conectandose.Desconectar(); // Desconectamos de la DB
         }

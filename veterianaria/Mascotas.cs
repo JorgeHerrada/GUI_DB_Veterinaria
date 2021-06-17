@@ -68,8 +68,8 @@ namespace veterianaria
             // Mandamos información de las cajas
             conectandose.Insertar_MASCOTAS(
                 Convert.ToInt32(tbx_codigo_cliente.Text),
-                tbx_nombre.Text,tbx_raza.Text,
-                tbx_especie.Text, 
+                tbx_nombre.Text, tbx_raza.Text,
+                tbx_especie.Text,
                 Convert.ToInt32(tbx_edad.Text),
                 Convert.ToDouble(tbx_peso.Text)
                 );
@@ -189,6 +189,47 @@ namespace veterianaria
             // Limpieza de TextBox
             tbx_consultar_codigo.Text = "0";
 
+
+            conectandose.Desconectar(); // Desconectamos de la DB
+        }
+
+        private void btn_MODIFICAR_Click(object sender, EventArgs e)
+        {
+            conectandose.Conectar(); // Connectamos a la DB
+
+            // Verificamos que la menos tengamos nombre y apellido
+            if (tbx_nombre.Text == "" || tbx_codigo_cliente.Text == "")
+            {
+                MessageBox.Show("Necesitas al menos un nombre y dueño.", "¡ERROR!");
+                return;
+            }
+            else if (tbx_consultar_codigo.Text == "" || tbx_consultar_codigo.Text == "0")
+            {
+                MessageBox.Show("Para modificar datos de la MASCOTAS necesitas el codigo de la misma.", "¡ERROR!");
+                return;
+            }
+
+            // Mandamos información de las cajas
+            conectandose.Update_MASCOTAS(
+                Convert.ToInt32(tbx_consultar_codigo.Text),
+                Convert.ToInt32(tbx_codigo_cliente.Text),
+                tbx_nombre.Text, tbx_raza.Text,
+                tbx_especie.Text,
+                Convert.ToInt32(tbx_edad.Text),
+                Convert.ToDouble(tbx_peso.Text)
+                );
+
+            // Actualización del DataGridView (OPCIONAL)
+            dtgv_MASCOTAS.DataSource = conectandose.Consultar("mascotas");
+
+            // Limpieza de TextBox
+            tbx_consultar_codigo.Text = "0";
+            tbx_nombre.Text = "";
+            tbx_codigo_cliente.Text = "";
+            tbx_raza.Text = "";
+            tbx_especie.Text = "";
+            tbx_edad.Text = "0";
+            tbx_peso.Text = "0";
 
             conectandose.Desconectar(); // Desconectamos de la DB
         }

@@ -278,6 +278,7 @@ namespace veterianaria
             this.btn_MODIFICAR.TabIndex = 61;
             this.btn_MODIFICAR.Text = "Modificar";
             this.btn_MODIFICAR.UseVisualStyleBackColor = true;
+            this.btn_MODIFICAR.Click += new System.EventHandler(this.btn_MODIFICAR_Click);
             // 
             // Servicios
             // 

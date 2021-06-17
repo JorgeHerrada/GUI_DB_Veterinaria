@@ -64,15 +64,15 @@ namespace veterianaria
             conectandose.Conectar(); // Connectamos a la DB
 
             // Verificamos que la menos tengamos nombre y apellido
-            if(tbx_apellido.Text == "" || tbx_nombre.Text == "" )
+            if (tbx_apellido.Text == "" || tbx_nombre.Text == "")
             {
                 MessageBox.Show("Necesitas al menos un nombre y un apellido.", "¡ERROR!");
                 return;
             }
 
             // Mandamos información de las cajas
-            conectandose.Insertar_CLIENTES(tbx_nombre.Text, 
-                tbx_apellido.Text, tbx_telefono.Text, 
+            conectandose.Insertar_CLIENTES(tbx_nombre.Text,
+                tbx_apellido.Text, tbx_telefono.Text,
                 tbx_email.Text, tbx_direccion.Text);
 
             // Actualización del DataGridView (OPCIONAL)
@@ -178,6 +178,42 @@ namespace veterianaria
             // Limpieza de TextBox
             tbx_consultar_codigo.Text = "0";
             
+
+            conectandose.Desconectar(); // Desconectamos de la DB
+        }
+
+        private void btn_MODIFICAR_Click(object sender, EventArgs e)
+        {
+            conectandose.Conectar(); // Connectamos a la DB
+
+            // Verificamos que la menos tengamos nombre y apellido
+            if (tbx_apellido.Text == "" || tbx_nombre.Text == "")
+            {
+                MessageBox.Show("Necesitas al menos un nombre y un apellido.", "¡ERROR!");
+                return;
+            }
+            else if (tbx_consultar_codigo.Text == "0" || tbx_consultar_codigo.Text == "")
+            {
+                MessageBox.Show("Para modificar datos del CLIENTE necesitas el codigo del mismo..", "¡ERROR!");
+                return;
+            }
+
+            // Mandamos información de las cajas
+            conectandose.Update_CLIENTES(
+                Convert.ToInt32(tbx_consultar_codigo.Text),
+                tbx_nombre.Text,
+                tbx_apellido.Text, tbx_telefono.Text,
+                tbx_email.Text, tbx_direccion.Text);
+
+            // Actualización del DataGridView (OPCIONAL)
+            dtgv_CLIENTES.DataSource = conectandose.Consultar("clientes");
+
+            // Limpieza de TextBox
+            tbx_nombre.Text = "";
+            tbx_apellido.Text = "";
+            tbx_telefono.Text = "";
+            tbx_email.Text = "";
+            tbx_direccion.Text = "";
 
             conectandose.Desconectar(); // Desconectamos de la DB
         }

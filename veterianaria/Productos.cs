@@ -191,5 +191,47 @@ namespace veterianaria
 
             conectandose.Desconectar(); // Desconectamos de la DB
         }
+
+        private void btn_MODIFICAR_Click(object sender, EventArgs e)
+        {
+            conectandose.Conectar(); // Connectamos a la DB
+
+            // Verificamos que la menos tengamos nombre y apellido
+            if (tbx_precio_venta.Text == "" || tbx_nombre.Text == "")
+            {
+                MessageBox.Show("Necesitas al menos el nombre y precio de venta.", "¡ERROR!");
+                return;
+            }
+            else if(tbx_consulta_codigo.Text == "0" || tbx_consulta_codigo.Text == "")
+            {
+                MessageBox.Show("Para modificar datos del PRODUCTO necesitas el codigo del mismo.", "¡ERROR!");
+                return;
+            }
+
+            // Mandamos información de las cajas
+            conectandose.Update_PRODUCTOS(
+                Convert.ToInt32(tbx_consulta_codigo.Text),
+                Convert.ToInt32(tbx_proveedor.Text),
+                Convert.ToInt32(tbx_servicio.Text),
+                tbx_nombre.Text,
+                Convert.ToInt32(tbx_precio_venta.Text),
+                Convert.ToInt32(tbx_precio_compra.Text),
+                Convert.ToInt32(tbx_existencias.Text)
+                );
+
+            // Actualización del DataGridView (OPCIONAL)
+            dtgv_PRODUCTOS.DataSource = conectandose.Consultar("productos");
+
+            // Limpieza de TextBoxes
+            tbx_consulta_codigo.Text = "0";
+            tbx_proveedor.Text = "0";
+            tbx_servicio.Text = "0";
+            tbx_nombre.Text = "";
+            tbx_precio_venta.Text = "0";
+            tbx_precio_compra.Text = "0";
+            tbx_existencias.Text = "0";
+
+            conectandose.Desconectar(); // Desconectamos de la DB
+        }
     }
 }

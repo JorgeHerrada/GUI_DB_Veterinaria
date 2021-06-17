@@ -166,5 +166,41 @@ namespace veterianaria
 
             conectandose.Desconectar(); // Desconectamos de la DB
         }
+
+        private void btn_MODIFICAR_Click(object sender, EventArgs e)
+        {
+            conectandose.Conectar(); // Connectamos a la DB
+
+            // Verificamos que la menos tengamos nombre y apellido
+            if (tbx_nombre.Text == "")
+            {
+                MessageBox.Show("Necesitas al menos un tip de servicio.", "¡ERROR!");
+                return;
+            }
+            else if (tbx_consulta_codigo.Text == "0" || tbx_consulta_codigo.Text == "")
+            {
+                MessageBox.Show("Para modificar datos del SERVICIO necesitas el codigo del mismo.", "¡ERROR!");
+                return;
+            }
+
+            // Mandamos información de las cajas
+            conectandose.Update_SERVICIOS(
+                Convert.ToInt32(tbx_consulta_codigo.Text),
+                Convert.ToInt32(tbx_codigo_empleado.Text),
+                Convert.ToInt32(tbx_precio.Text),
+                tbx_nombre.Text
+                );
+
+            // Actualización del DataGridView (OPCIONAL)
+            dtgv_SERVICIOS.DataSource = conectandose.Consultar("servicios");
+
+            // Limpieza de TextBox
+            tbx_consulta_codigo.Text = "0";
+            tbx_codigo_empleado.Text = "0";
+            tbx_precio.Text = "0";
+            tbx_nombre.Text = "";
+
+            conectandose.Desconectar(); // Desconectamos de la DB
+        }
     }
 }

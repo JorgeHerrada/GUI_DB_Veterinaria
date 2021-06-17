@@ -360,11 +360,11 @@ namespace veterianaria
             // dtgv_PERSONAL
             // 
             this.dtgv_PERSONAL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgv_PERSONAL.Location = new System.Drawing.Point(80, 490);
+            this.dtgv_PERSONAL.Location = new System.Drawing.Point(80, 467);
             this.dtgv_PERSONAL.Name = "dtgv_PERSONAL";
             this.dtgv_PERSONAL.RowHeadersWidth = 51;
             this.dtgv_PERSONAL.RowTemplate.Height = 24;
-            this.dtgv_PERSONAL.Size = new System.Drawing.Size(952, 277);
+            this.dtgv_PERSONAL.Size = new System.Drawing.Size(952, 300);
             this.dtgv_PERSONAL.TabIndex = 70;
             // 
             // rbtn_Eliminar
@@ -400,6 +400,7 @@ namespace veterianaria
             this.btn_MODIFICAR.TabIndex = 74;
             this.btn_MODIFICAR.Text = "Modificar";
             this.btn_MODIFICAR.UseVisualStyleBackColor = true;
+            this.btn_MODIFICAR.Click += new System.EventHandler(this.btn_MODIFICAR_Click);
             // 
             // btn_ELIMINAR
             // 
