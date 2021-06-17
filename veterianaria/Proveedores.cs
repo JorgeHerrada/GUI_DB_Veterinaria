@@ -87,9 +87,75 @@ namespace veterianaria
 
         private void Proveedores_Load(object sender, EventArgs e)
         {
+            // inicializando DataGridView
             conectandose.Conectar();
             dtgv_PROVEEDORES.DataSource = conectandose.Consultar("proveedores");
             conectandose.Desconectar();
+
+            // inicializando boxes
+            tbx_consulta_nombre.Enabled = true;
+            tbx_consulta_codigo.Enabled = true;
+
+            tbx_nombre.Enabled = false;
+            tbx_telefono.Enabled = false;
+            tbx_direccion.Enabled = false;
+            tbx_email.Enabled = false;
+        }
+
+        private void rbtn_CONSULTAR_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rbtn_CONSULTAR.Checked == true)
+            {
+                tbx_consulta_nombre.Enabled = true;
+                tbx_consulta_codigo.Enabled = true;
+
+                tbx_nombre.Enabled = false;
+                tbx_telefono.Enabled = false;
+                tbx_direccion.Enabled = false;
+                tbx_email.Enabled = false;
+            }
+        }
+
+        private void rbtn_Eliminar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtn_Eliminar.Checked == true)
+            {
+                tbx_consulta_nombre.Enabled = false;
+                tbx_consulta_codigo.Enabled = true;
+
+                tbx_nombre.Enabled = false;
+                tbx_telefono.Enabled = false;
+                tbx_direccion.Enabled = false;
+                tbx_email.Enabled = false;
+            }
+        }
+
+        private void rbtn_AGREGAR_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtn_AGREGAR.Checked == true)
+            {
+                tbx_consulta_nombre.Enabled = false;
+                tbx_consulta_codigo.Enabled = false;
+
+                tbx_nombre.Enabled = true;
+                tbx_telefono.Enabled = true;
+                tbx_direccion.Enabled = true;
+                tbx_email.Enabled = true;
+            }
+        }
+
+        private void rbtn_MODIFICAR_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtn_AGREGAR.Checked == true)
+            {
+                tbx_consulta_nombre.Enabled = false;
+                tbx_consulta_codigo.Enabled = true;
+
+                tbx_nombre.Enabled = true;
+                tbx_telefono.Enabled = true;
+                tbx_direccion.Enabled = true;
+                tbx_email.Enabled = true;
+            }
         }
     }
 }

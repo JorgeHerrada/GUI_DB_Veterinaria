@@ -98,6 +98,81 @@ namespace veterianaria
             conectandose.Conectar();
             dtgv_PRODUCTOS.DataSource = conectandose.Consultar("productos");
             conectandose.Desconectar();
+
+            // inicializando boxes
+            tbx_consulta_nombre.Enabled = true;
+            tbx_consulta_codigo.Enabled = true;
+
+            tbx_nombre.Enabled = false;
+            tbx_proveedor.Enabled = false;
+            tbx_servicio.Enabled = false;
+            tbx_precio_venta.Enabled = false;
+            tbx_precio_compra.Enabled = false;
+            tbx_existencias.Enabled = false;
+        }
+
+        private void rbtn_CONSULTAR_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rbtn_CONSULTAR.Checked == true)
+            {
+                tbx_consulta_nombre.Enabled = true;
+                tbx_consulta_codigo.Enabled = true;
+
+                tbx_nombre.Enabled = false;
+                tbx_proveedor.Enabled = false;
+                tbx_servicio.Enabled = false;
+                tbx_precio_venta.Enabled = false;
+                tbx_precio_compra.Enabled = false;
+                tbx_existencias.Enabled = false;
+            }
+        }
+
+        private void rbtn_Eliminar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtn_Eliminar.Checked == true)
+            {
+                tbx_consulta_nombre.Enabled = false;
+                tbx_consulta_codigo.Enabled = true;
+
+                tbx_nombre.Enabled = false;
+                tbx_proveedor.Enabled = false;
+                tbx_servicio.Enabled = false;
+                tbx_precio_venta.Enabled = false;
+                tbx_precio_compra.Enabled = false;
+                tbx_existencias.Enabled = false;
+            }
+        }
+
+        private void rbtn_AGREGAR_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtn_AGREGAR.Checked == true)
+            {
+                tbx_consulta_nombre.Enabled = false;
+                tbx_consulta_codigo.Enabled = false;
+
+                tbx_nombre.Enabled = true;
+                tbx_proveedor.Enabled = true;
+                tbx_servicio.Enabled = true;
+                tbx_precio_venta.Enabled = true;
+                tbx_precio_compra.Enabled = true;
+                tbx_existencias.Enabled = true;
+            }
+        }
+
+        private void rbtn_MODIFICAR_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtn_MODIFICAR.Checked == true)
+            {
+                tbx_consulta_nombre.Enabled = false;
+                tbx_consulta_codigo.Enabled = true;
+
+                tbx_nombre.Enabled = true;
+                tbx_proveedor.Enabled = true;
+                tbx_servicio.Enabled = true;
+                tbx_precio_venta.Enabled = true;
+                tbx_precio_compra.Enabled = true;
+                tbx_existencias.Enabled = true;
+            }
         }
     }
 }

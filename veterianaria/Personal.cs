@@ -98,6 +98,107 @@ namespace veterianaria
             conectandose.Conectar();
             dtgv_PERSONAL.DataSource = conectandose.Consultar("personal");
             conectandose.Desconectar();
+
+            // inicializando boxes
+            tbx_consulta_nombre.Enabled = true;
+            tbx_consulta_codigo.Enabled = true;
+
+            tbx_nombre.Enabled = false;
+            tbx_apellido.Enabled = false;
+            tbx_telefono.Enabled = false;
+            tbx_direccion.Enabled = false;
+            tbx_email.Enabled = false;
+            tbx_puesto.Enabled = false;
+            tbx_estudios.Enabled = false;
+            tbx_antiguedad.Enabled = false;
+            tbx_puesto.Enabled = false;
+            tbx_horario.Enabled = false;
+            tbx_salario.Enabled = false;
+
+        }
+
+        private void rbtn_CONSULTAR_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rbtn_CONSULTAR.Checked == true)
+            {
+                tbx_consulta_nombre.Enabled = true;
+                tbx_consulta_codigo.Enabled = true;
+
+                tbx_nombre.Enabled = false;
+                tbx_apellido.Enabled = false;
+                tbx_telefono.Enabled = false;
+                tbx_direccion.Enabled = false;
+                tbx_email.Enabled = false;
+                tbx_puesto.Enabled = false;
+                tbx_estudios.Enabled = false;
+                tbx_antiguedad.Enabled = false;
+                tbx_puesto.Enabled = false;
+                tbx_horario.Enabled = false;
+                tbx_salario.Enabled = false;
+            }
+        }
+
+        private void rbtn_Eliminar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtn_Eliminar.Checked == true)
+            {
+                tbx_consulta_nombre.Enabled = false;
+                tbx_consulta_codigo.Enabled = true;
+
+                tbx_nombre.Enabled = false;
+                tbx_apellido.Enabled = false;
+                tbx_telefono.Enabled = false;
+                tbx_direccion.Enabled = false;
+                tbx_email.Enabled = false;
+                tbx_puesto.Enabled = false;
+                tbx_estudios.Enabled = false;
+                tbx_antiguedad.Enabled = false;
+                tbx_puesto.Enabled = false;
+                tbx_horario.Enabled = false;
+                tbx_salario.Enabled = false;
+            }
+        }
+
+        private void rbtn_AGREGAR_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtn_AGREGAR.Checked == true)
+            {
+                tbx_consulta_nombre.Enabled = false;
+                tbx_consulta_codigo.Enabled = false;
+
+                tbx_nombre.Enabled = true;
+                tbx_apellido.Enabled = true;
+                tbx_telefono.Enabled = true;
+                tbx_direccion.Enabled = true;
+                tbx_email.Enabled = true;
+                tbx_puesto.Enabled = true;
+                tbx_estudios.Enabled = true;
+                tbx_antiguedad.Enabled = true;
+                tbx_puesto.Enabled = true;
+                tbx_horario.Enabled = true;
+                tbx_salario.Enabled = true;
+            }
+        }
+
+        private void rbtn_MODIFICAR_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtn_MODIFICAR.Checked == true)
+            {
+                tbx_consulta_nombre.Enabled = false;
+                tbx_consulta_codigo.Enabled = true;
+
+                tbx_nombre.Enabled = true;
+                tbx_apellido.Enabled = true;
+                tbx_telefono.Enabled = true;
+                tbx_direccion.Enabled = true;
+                tbx_email.Enabled = true;
+                tbx_puesto.Enabled = true;
+                tbx_estudios.Enabled = true;
+                tbx_antiguedad.Enabled = true;
+                tbx_puesto.Enabled = true;
+                tbx_horario.Enabled = true;
+                tbx_salario.Enabled = true;
+            }
         }
     }
 }

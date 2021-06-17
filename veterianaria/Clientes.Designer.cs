@@ -80,6 +80,7 @@ namespace veterianaria
             // rbtn_CONSULTAR
             // 
             this.rbtn_CONSULTAR.AutoSize = true;
+            this.rbtn_CONSULTAR.Checked = true;
             this.rbtn_CONSULTAR.Location = new System.Drawing.Point(49, 103);
             this.rbtn_CONSULTAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtn_CONSULTAR.Name = "rbtn_CONSULTAR";
@@ -88,6 +89,7 @@ namespace veterianaria
             this.rbtn_CONSULTAR.TabStop = true;
             this.rbtn_CONSULTAR.Text = "Consultar";
             this.rbtn_CONSULTAR.UseVisualStyleBackColor = true;
+            this.rbtn_CONSULTAR.CheckedChanged += new System.EventHandler(this.rbtn_CONSULTAR_CheckedChanged);
             // 
             // rbtn_AGREGAR
             // 
@@ -97,9 +99,9 @@ namespace veterianaria
             this.rbtn_AGREGAR.Name = "rbtn_AGREGAR";
             this.rbtn_AGREGAR.Size = new System.Drawing.Size(80, 21);
             this.rbtn_AGREGAR.TabIndex = 4;
-            this.rbtn_AGREGAR.TabStop = true;
             this.rbtn_AGREGAR.Text = "Agregar";
             this.rbtn_AGREGAR.UseVisualStyleBackColor = true;
+            this.rbtn_AGREGAR.CheckedChanged += new System.EventHandler(this.rbtn_AGREGAR_CheckedChanged);
             // 
             // lbl_CONSULTA_NOMBRE
             // 
@@ -284,9 +286,9 @@ namespace veterianaria
             this.rbtn_Eliminar.Name = "rbtn_Eliminar";
             this.rbtn_Eliminar.Size = new System.Drawing.Size(79, 21);
             this.rbtn_Eliminar.TabIndex = 26;
-            this.rbtn_Eliminar.TabStop = true;
             this.rbtn_Eliminar.Text = "Eliminar";
             this.rbtn_Eliminar.UseVisualStyleBackColor = true;
+            this.rbtn_Eliminar.CheckedChanged += new System.EventHandler(this.rbtn_Eliminar_CheckedChanged);
             // 
             // rbtn_MODIFICAR
             // 
@@ -295,9 +297,9 @@ namespace veterianaria
             this.rbtn_MODIFICAR.Name = "rbtn_MODIFICAR";
             this.rbtn_MODIFICAR.Size = new System.Drawing.Size(143, 21);
             this.rbtn_MODIFICAR.TabIndex = 59;
-            this.rbtn_MODIFICAR.TabStop = true;
             this.rbtn_MODIFICAR.Text = "Modificar Registro";
             this.rbtn_MODIFICAR.UseVisualStyleBackColor = true;
+            this.rbtn_MODIFICAR.CheckedChanged += new System.EventHandler(this.rbtn_MODIFICAR_CheckedChanged);
             // 
             // Clientes
             // 

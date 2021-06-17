@@ -93,6 +93,76 @@ namespace veterianaria
             conectandose.Conectar();
             dtgv_CLIENTES.DataSource = conectandose.Consultar("clientes");
             conectandose.Desconectar();
+
+            // Inicializando TextBoxes
+            tbx_consultar_nombre.Enabled = true;
+            tbx_consultar_codigo.Enabled = true;
+
+            tbx_nombre.Enabled = false;
+            tbx_telefono.Enabled = false;
+            tbx_direccion.Enabled = false;
+            tbx_apellido.Enabled = false;
+            tbx_email.Enabled = false;
+        }
+
+        private void rbtn_CONSULTAR_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtn_CONSULTAR.Checked == true)
+            {
+                tbx_consultar_nombre.Enabled = true;
+                tbx_consultar_codigo.Enabled = true;
+
+                tbx_nombre.Enabled = false;
+                tbx_telefono.Enabled = false;
+                tbx_direccion.Enabled = false;
+                tbx_apellido.Enabled = false;
+                tbx_email.Enabled = false;
+            }
+        }
+
+        private void rbtn_Eliminar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtn_Eliminar.Checked == true)
+            {
+                tbx_consultar_nombre.Enabled = false;
+                tbx_consultar_codigo.Enabled = true;
+
+                tbx_nombre.Enabled = false;
+                tbx_telefono.Enabled = false;
+                tbx_direccion.Enabled = false;
+                tbx_apellido.Enabled = false;
+                tbx_email.Enabled = false;
+            }
+        }
+
+        private void rbtn_AGREGAR_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtn_AGREGAR.Checked == true)
+            {
+                tbx_consultar_nombre.Enabled = false;
+                tbx_consultar_codigo.Enabled = false;
+
+                tbx_nombre.Enabled = true;
+                tbx_telefono.Enabled = true;
+                tbx_direccion.Enabled = true;
+                tbx_apellido.Enabled = true;
+                tbx_email.Enabled = true;
+            }
+        }
+
+        private void rbtn_MODIFICAR_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtn_MODIFICAR.Checked == true)
+            {
+                tbx_consultar_nombre.Enabled = false;
+                tbx_consultar_codigo.Enabled = true;
+
+                tbx_nombre.Enabled = true;
+                tbx_telefono.Enabled = true;
+                tbx_direccion.Enabled = true;
+                tbx_apellido.Enabled = true;
+                tbx_email.Enabled = true;
+            }
         }
     }
 }

@@ -98,6 +98,82 @@ namespace veterianaria
             conectandose.Conectar();
             dtgv_MASCOTAS.DataSource = conectandose.Consultar("mascotas");
             conectandose.Desconectar();
+
+            // inicializando textboxes
+            tbx_consultar_nombre.Enabled = true;
+            tbx_consultar_codigo.Enabled = true;
+
+            tbx_nombre.Enabled = false;
+            tbx_especie.Enabled = false;
+            tbx_codigo_cliente.Enabled = false;
+            tbx_raza.Enabled = false;
+            tbx_peso.Enabled = false;
+            tbx_edad.Enabled = false;
+
+        }
+
+        private void rbtn_CONSULTAR_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rbtn_CONSULTAR.Checked == true)
+            {
+                tbx_consultar_nombre.Enabled = true;
+                tbx_consultar_codigo.Enabled = true;
+
+                tbx_nombre.Enabled = false;
+                tbx_especie.Enabled = false;
+                tbx_codigo_cliente.Enabled = false;
+                tbx_raza.Enabled = false;
+                tbx_peso.Enabled = false;
+                tbx_edad.Enabled = false;
+            }
+        }
+
+        private void rbtn_Eliminar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtn_Eliminar.Checked == true)
+            {
+                tbx_consultar_nombre.Enabled = false;
+                tbx_consultar_codigo.Enabled = true;
+
+                tbx_nombre.Enabled = false;
+                tbx_especie.Enabled = false;
+                tbx_codigo_cliente.Enabled = false;
+                tbx_raza.Enabled = false;
+                tbx_peso.Enabled = false;
+                tbx_edad.Enabled = false;
+            }
+        }
+
+        private void rbtn_AGREGAR_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtn_AGREGAR.Checked == true)
+            {
+                tbx_consultar_nombre.Enabled = false;
+                tbx_consultar_codigo.Enabled = false;
+
+                tbx_nombre.Enabled = true;
+                tbx_especie.Enabled = true;
+                tbx_codigo_cliente.Enabled = true;
+                tbx_raza.Enabled = true;
+                tbx_peso.Enabled = true;
+                tbx_edad.Enabled = true;
+            }
+        }
+
+        private void rbtn_MODIFICAR_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtn_MODIFICAR.Checked == true)
+            {
+                tbx_consultar_nombre.Enabled = false;
+                tbx_consultar_codigo.Enabled = true;
+
+                tbx_nombre.Enabled = true;
+                tbx_especie.Enabled = true;
+                tbx_codigo_cliente.Enabled = true;
+                tbx_raza.Enabled = true;
+                tbx_peso.Enabled = true;
+                tbx_edad.Enabled = true;
+            }
         }
     }
 }
