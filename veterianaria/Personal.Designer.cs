@@ -61,6 +61,8 @@ namespace veterianaria
             this.btn_CONSULTAR = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dtgv_PERSONAL = new System.Windows.Forms.DataGridView();
+            this.rbtn_Eliminar = new System.Windows.Forms.RadioButton();
+            this.rbtn_MODIFICAR = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_PERSONAL)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,6 +93,8 @@ namespace veterianaria
             this.tbx_consulta_codigo.Name = "tbx_consulta_codigo";
             this.tbx_consulta_codigo.Size = new System.Drawing.Size(100, 22);
             this.tbx_consulta_codigo.TabIndex = 43;
+            this.tbx_consulta_codigo.Text = "0";
+            this.tbx_consulta_codigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tbx_consulta_nombre
             // 
@@ -133,7 +137,7 @@ namespace veterianaria
             // rbtn_CONSULTAR
             // 
             this.rbtn_CONSULTAR.AutoSize = true;
-            this.rbtn_CONSULTAR.Location = new System.Drawing.Point(91, 126);
+            this.rbtn_CONSULTAR.Location = new System.Drawing.Point(79, 126);
             this.rbtn_CONSULTAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtn_CONSULTAR.Name = "rbtn_CONSULTAR";
             this.rbtn_CONSULTAR.Size = new System.Drawing.Size(89, 21);
@@ -359,11 +363,37 @@ namespace veterianaria
             this.dtgv_PERSONAL.Size = new System.Drawing.Size(952, 175);
             this.dtgv_PERSONAL.TabIndex = 70;
             // 
+            // rbtn_Eliminar
+            // 
+            this.rbtn_Eliminar.AutoSize = true;
+            this.rbtn_Eliminar.Location = new System.Drawing.Point(209, 126);
+            this.rbtn_Eliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbtn_Eliminar.Name = "rbtn_Eliminar";
+            this.rbtn_Eliminar.Size = new System.Drawing.Size(79, 21);
+            this.rbtn_Eliminar.TabIndex = 71;
+            this.rbtn_Eliminar.TabStop = true;
+            this.rbtn_Eliminar.Text = "Eliminar";
+            this.rbtn_Eliminar.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.rbtn_Eliminar.UseVisualStyleBackColor = true;
+            // 
+            // rbtn_MODIFICAR
+            // 
+            this.rbtn_MODIFICAR.AutoSize = true;
+            this.rbtn_MODIFICAR.Location = new System.Drawing.Point(887, 126);
+            this.rbtn_MODIFICAR.Name = "rbtn_MODIFICAR";
+            this.rbtn_MODIFICAR.Size = new System.Drawing.Size(143, 21);
+            this.rbtn_MODIFICAR.TabIndex = 72;
+            this.rbtn_MODIFICAR.TabStop = true;
+            this.rbtn_MODIFICAR.Text = "Modificar Registro";
+            this.rbtn_MODIFICAR.UseVisualStyleBackColor = true;
+            // 
             // Personal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1121, 706);
+            this.Controls.Add(this.rbtn_MODIFICAR);
+            this.Controls.Add(this.rbtn_Eliminar);
             this.Controls.Add(this.dtgv_PERSONAL);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btn_CONSULTAR);
@@ -399,6 +429,7 @@ namespace veterianaria
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Personal";
             this.Text = "Personal  -  CHUCHOLANDIA®";
+            this.Load += new System.EventHandler(this.Personal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_PERSONAL)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -439,5 +470,7 @@ namespace veterianaria
         private System.Windows.Forms.Button btn_CONSULTAR;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dtgv_PERSONAL;
+        private System.Windows.Forms.RadioButton rbtn_Eliminar;
+        private System.Windows.Forms.RadioButton rbtn_MODIFICAR;
     }
 }

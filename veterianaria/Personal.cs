@@ -92,5 +92,12 @@ namespace veterianaria
 
             conectandose.Desconectar(); // Desconectamos de la DB
         }
+
+        private void Personal_Load(object sender, EventArgs e)
+        {
+            conectandose.Conectar();
+            dtgv_PERSONAL.DataSource = conectandose.Consultar("personal");
+            conectandose.Desconectar();
+        }
     }
 }

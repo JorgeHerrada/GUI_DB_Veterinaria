@@ -51,6 +51,10 @@ namespace veterianaria
             this.tbn_CONSULTAR = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dtgv_VISITAS = new System.Windows.Forms.DataGridView();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.rbtn_Eliminar = new System.Windows.Forms.RadioButton();
+            this.rbtn_MODIFICAR = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_VISITAS)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,6 +85,8 @@ namespace veterianaria
             this.tbx_consulta_codigo.Name = "tbx_consulta_codigo";
             this.tbx_consulta_codigo.Size = new System.Drawing.Size(100, 22);
             this.tbx_consulta_codigo.TabIndex = 27;
+            this.tbx_consulta_codigo.Text = "0";
+            this.tbx_consulta_codigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tbx_consulta_nombre_mascota
             // 
@@ -123,7 +129,7 @@ namespace veterianaria
             // rbtn_CONSULTAR
             // 
             this.rbtn_CONSULTAR.AutoSize = true;
-            this.rbtn_CONSULTAR.Location = new System.Drawing.Point(84, 130);
+            this.rbtn_CONSULTAR.Location = new System.Drawing.Point(73, 128);
             this.rbtn_CONSULTAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtn_CONSULTAR.Name = "rbtn_CONSULTAR";
             this.rbtn_CONSULTAR.Size = new System.Drawing.Size(89, 21);
@@ -139,6 +145,8 @@ namespace veterianaria
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 22);
             this.textBox3.TabIndex = 42;
+            this.textBox3.Text = "0";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox4
             // 
@@ -147,6 +155,8 @@ namespace veterianaria
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 22);
             this.textBox4.TabIndex = 41;
+            this.textBox4.Text = "0";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 
@@ -168,24 +178,26 @@ namespace veterianaria
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(980, 189);
+            this.textBox5.Location = new System.Drawing.Point(665, 52);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
+            this.textBox5.Size = new System.Drawing.Size(102, 22);
             this.textBox5.TabIndex = 46;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(741, 233);
+            this.textBox6.Location = new System.Drawing.Point(523, 276);
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 22);
             this.textBox6.TabIndex = 45;
+            this.textBox6.Text = "0";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(868, 192);
+            this.label3.Location = new System.Drawing.Point(674, 234);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 17);
             this.label3.TabIndex = 44;
@@ -194,7 +206,7 @@ namespace veterianaria
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(629, 238);
+            this.label4.Location = new System.Drawing.Point(411, 281);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 17);
             this.label4.TabIndex = 43;
@@ -202,7 +214,7 @@ namespace veterianaria
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(741, 183);
+            this.textBox7.Location = new System.Drawing.Point(667, 11);
             this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 22);
@@ -211,7 +223,7 @@ namespace veterianaria
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(629, 187);
+            this.label6.Location = new System.Drawing.Point(674, 185);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 17);
             this.label6.TabIndex = 47;
@@ -219,13 +231,14 @@ namespace veterianaria
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(916, 281);
+            this.button1.Location = new System.Drawing.Point(917, 281);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(164, 48);
             this.button1.TabIndex = 51;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tbn_CONSULTAR
             // 
@@ -259,11 +272,52 @@ namespace veterianaria
             this.dtgv_VISITAS.Size = new System.Drawing.Size(1008, 272);
             this.dtgv_VISITAS.TabIndex = 54;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(813, 180);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 55;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(813, 235);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker2.TabIndex = 56;
+            // 
+            // rbtn_Eliminar
+            // 
+            this.rbtn_Eliminar.AutoSize = true;
+            this.rbtn_Eliminar.Location = new System.Drawing.Point(229, 128);
+            this.rbtn_Eliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbtn_Eliminar.Name = "rbtn_Eliminar";
+            this.rbtn_Eliminar.Size = new System.Drawing.Size(79, 21);
+            this.rbtn_Eliminar.TabIndex = 57;
+            this.rbtn_Eliminar.TabStop = true;
+            this.rbtn_Eliminar.Text = "Eliminar";
+            this.rbtn_Eliminar.UseVisualStyleBackColor = true;
+            // 
+            // rbtn_MODIFICAR
+            // 
+            this.rbtn_MODIFICAR.AutoSize = true;
+            this.rbtn_MODIFICAR.Location = new System.Drawing.Point(870, 128);
+            this.rbtn_MODIFICAR.Name = "rbtn_MODIFICAR";
+            this.rbtn_MODIFICAR.Size = new System.Drawing.Size(143, 21);
+            this.rbtn_MODIFICAR.TabIndex = 58;
+            this.rbtn_MODIFICAR.TabStop = true;
+            this.rbtn_MODIFICAR.Text = "Modificar Registro";
+            this.rbtn_MODIFICAR.UseVisualStyleBackColor = true;
+            // 
             // Visitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 755);
+            this.Controls.Add(this.rbtn_MODIFICAR);
+            this.Controls.Add(this.rbtn_Eliminar);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.dtgv_VISITAS);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.tbn_CONSULTAR);
@@ -320,5 +374,9 @@ namespace veterianaria
         private System.Windows.Forms.Button tbn_CONSULTAR;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dtgv_VISITAS;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.RadioButton rbtn_Eliminar;
+        private System.Windows.Forms.RadioButton rbtn_MODIFICAR;
     }
 }

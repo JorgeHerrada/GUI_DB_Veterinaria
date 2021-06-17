@@ -25,12 +25,14 @@ namespace veterianaria
 
         private void label7_Click(object sender, EventArgs e)
         {
-
+            // NO CODE
         }
 
         private void Visitas_Load(object sender, EventArgs e)
         {
-
+            conectandose.Conectar();
+            dtgv_VISITAS.DataSource = conectandose.Consultar("visitas");
+            conectandose.Desconectar();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -62,6 +64,11 @@ namespace veterianaria
                 dtgv_VISITAS.DataSource = conectandose.Consultar("mascotas");
                 conectandose.Desconectar();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

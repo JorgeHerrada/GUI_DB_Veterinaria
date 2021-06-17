@@ -127,7 +127,51 @@ namespace veterianaria
             ejecutor.ExecuteNonQuery();
 
             System.Windows.Forms.MessageBox.Show("AGREGADO CORRECTAMENTE", "SUCCESSFULLY INSERTED");
+        }
 
+
+        // Metodo para insertar en tabla PRODUCTOS
+        public void Insertar_PRODUCTOS(int proveedor, int servicio, string nombre, int precio_venta, int precio_compra, int existencias)
+        {
+            // declaramos el query
+            string query = "INSERT into productos(id_proveedor,id_servicio,nombre,precio_venta,precio_compra,existencia)"
+                + " VALUES(" + proveedor + "," + servicio + ",'" + nombre + "'," + precio_venta + "," + precio_compra + ")";
+
+            // Ejecutamos comando, mandamos el query y la connexion
+            NpgsqlCommand ejecutor = new NpgsqlCommand(query, conn);
+            ejecutor.ExecuteNonQuery();
+
+            System.Windows.Forms.MessageBox.Show("AGREGADO CORRECTAMENTE", "SUCCESSFULLY INSERTED");
+        }
+
+
+        // Metodo para insertar en tabla PROVEEDORES
+        public void Insertar_PROVEEDORES(string nombre, string direccion, string telefono, string email)
+        {
+            // declaramos el query
+            string query = "INSERT into proveedores(nombre,direccion,telefono,email)"
+                + " VALUES('" + nombre + "','" + direccion + "','" + telefono + "','" + email + "')";
+
+            // Ejecutamos comando, mandamos el query y la connexion
+            NpgsqlCommand ejecutor = new NpgsqlCommand(query, conn);
+            ejecutor.ExecuteNonQuery();
+
+            System.Windows.Forms.MessageBox.Show("AGREGADO CORRECTAMENTE", "SUCCESSFULLY INSERTED");
+        }
+
+
+        // Metodo para insertar en tabla SERVICIOS
+        public void Insertar_SERVICIOS(int codigo_empleado, int precio, string nombre)
+        {
+            // declaramos el query
+            string query = "INSERT into servicios(id_empleado,precio,nombre)"
+                + " VALUES(" + codigo_empleado + "," + precio + ",'" + nombre+ "')";
+
+            // Ejecutamos comando, mandamos el query y la connexion
+            NpgsqlCommand ejecutor = new NpgsqlCommand(query, conn); 
+            ejecutor.ExecuteNonQuery();
+
+            System.Windows.Forms.MessageBox.Show("AGREGADO CORRECTAMENTE", "SUCCESSFULLY INSERTED");
         }
     }
 }

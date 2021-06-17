@@ -47,6 +47,8 @@ namespace veterianaria
             this.btn_CONSULTAR = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dtgv_SERVICIOS = new System.Windows.Forms.DataGridView();
+            this.rbtn_Eliminar = new System.Windows.Forms.RadioButton();
+            this.rbtn_MODIFICAR = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_SERVICIOS)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,6 +80,8 @@ namespace veterianaria
             this.tbx_precio.Name = "tbx_precio";
             this.tbx_precio.Size = new System.Drawing.Size(193, 22);
             this.tbx_precio.TabIndex = 53;
+            this.tbx_precio.Text = "0";
+            this.tbx_precio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label4
             // 
@@ -95,6 +99,8 @@ namespace veterianaria
             this.tbx_codigo_empleado.Name = "tbx_codigo_empleado";
             this.tbx_codigo_empleado.Size = new System.Drawing.Size(201, 22);
             this.tbx_codigo_empleado.TabIndex = 50;
+            this.tbx_codigo_empleado.Text = "0";
+            this.tbx_codigo_empleado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tbx_nombre
             // 
@@ -129,6 +135,8 @@ namespace veterianaria
             this.tbx_consulta_codigo.Name = "tbx_consulta_codigo";
             this.tbx_consulta_codigo.Size = new System.Drawing.Size(100, 22);
             this.tbx_consulta_codigo.TabIndex = 46;
+            this.tbx_consulta_codigo.Text = "0";
+            this.tbx_consulta_codigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tbx_consulta_nombre
             // 
@@ -162,7 +170,7 @@ namespace veterianaria
             // rbtn_CONSULTAR
             // 
             this.rbtn_CONSULTAR.AutoSize = true;
-            this.rbtn_CONSULTAR.Location = new System.Drawing.Point(93, 117);
+            this.rbtn_CONSULTAR.Location = new System.Drawing.Point(82, 117);
             this.rbtn_CONSULTAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtn_CONSULTAR.Name = "rbtn_CONSULTAR";
             this.rbtn_CONSULTAR.Size = new System.Drawing.Size(89, 21);
@@ -189,6 +197,7 @@ namespace veterianaria
             this.btn_AGREGAR.TabIndex = 54;
             this.btn_AGREGAR.Text = "Agregar";
             this.btn_AGREGAR.UseVisualStyleBackColor = true;
+            this.btn_AGREGAR.Click += new System.EventHandler(this.btn_AGREGAR_Click);
             // 
             // btn_CONSULTAR
             // 
@@ -215,18 +224,43 @@ namespace veterianaria
             // dtgv_SERVICIOS
             // 
             this.dtgv_SERVICIOS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgv_SERVICIOS.Location = new System.Drawing.Point(82, 403);
+            this.dtgv_SERVICIOS.Location = new System.Drawing.Point(82, 349);
             this.dtgv_SERVICIOS.Name = "dtgv_SERVICIOS";
             this.dtgv_SERVICIOS.RowHeadersWidth = 51;
             this.dtgv_SERVICIOS.RowTemplate.Height = 24;
-            this.dtgv_SERVICIOS.Size = new System.Drawing.Size(964, 221);
+            this.dtgv_SERVICIOS.Size = new System.Drawing.Size(964, 304);
             this.dtgv_SERVICIOS.TabIndex = 57;
+            // 
+            // rbtn_Eliminar
+            // 
+            this.rbtn_Eliminar.AutoSize = true;
+            this.rbtn_Eliminar.Location = new System.Drawing.Point(217, 117);
+            this.rbtn_Eliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbtn_Eliminar.Name = "rbtn_Eliminar";
+            this.rbtn_Eliminar.Size = new System.Drawing.Size(79, 21);
+            this.rbtn_Eliminar.TabIndex = 58;
+            this.rbtn_Eliminar.TabStop = true;
+            this.rbtn_Eliminar.Text = "Eliminar";
+            this.rbtn_Eliminar.UseVisualStyleBackColor = true;
+            // 
+            // rbtn_MODIFICAR
+            // 
+            this.rbtn_MODIFICAR.AutoSize = true;
+            this.rbtn_MODIFICAR.Location = new System.Drawing.Point(905, 114);
+            this.rbtn_MODIFICAR.Name = "rbtn_MODIFICAR";
+            this.rbtn_MODIFICAR.Size = new System.Drawing.Size(143, 21);
+            this.rbtn_MODIFICAR.TabIndex = 59;
+            this.rbtn_MODIFICAR.TabStop = true;
+            this.rbtn_MODIFICAR.Text = "Modificar Registro";
+            this.rbtn_MODIFICAR.UseVisualStyleBackColor = true;
             // 
             // Servicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1127, 759);
+            this.Controls.Add(this.rbtn_MODIFICAR);
+            this.Controls.Add(this.rbtn_Eliminar);
             this.Controls.Add(this.dtgv_SERVICIOS);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btn_CONSULTAR);
@@ -248,6 +282,7 @@ namespace veterianaria
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Servicios";
             this.Text = "Servicio  -  CHUCHOLANDIA®";
+            this.Load += new System.EventHandler(this.Servicios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_SERVICIOS)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -274,5 +309,7 @@ namespace veterianaria
         private System.Windows.Forms.Button btn_CONSULTAR;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dtgv_SERVICIOS;
+        private System.Windows.Forms.RadioButton rbtn_Eliminar;
+        private System.Windows.Forms.RadioButton rbtn_MODIFICAR;
     }
 }
