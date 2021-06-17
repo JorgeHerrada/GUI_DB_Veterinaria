@@ -88,6 +88,7 @@ namespace veterianaria
             if (tbx_codigo_mascota.Text == "" || tbx_codigo_mascota.Text == "0")
             {
                 MessageBox.Show("Necesitas al menos el codigo de la mascota.", "¡ERROR!");
+                conectandose.Desconectar();
                 return;
             }
 
@@ -202,11 +203,13 @@ namespace veterianaria
             if (tbx_codigo_mascota.Text == "" || tbx_codigo_mascota.Text == "0")
             {
                 MessageBox.Show("Necesitas al menos el codigo de la mascota.", "¡ERROR!");
+                conectandose.Desconectar();
                 return;
             }
             else if (tbx_consulta_codigo.Text == "0" || tbx_consulta_codigo.Text == "")
             {
                 MessageBox.Show("Para modificar datos de la VISITA necesitas el codigo de la misma.", "¡ERROR!");
+                conectandose.Desconectar();
                 return;
             }
 
@@ -224,7 +227,7 @@ namespace veterianaria
             dtgv_VISITAS.DataSource = conectandose.Consultar("visitas");
 
             // Limpieza de TextBox
-            tbx_consulta_codigo.Text = "0"
+            tbx_consulta_codigo.Text = "0";
             tbx_codigo_servicio.Text = "0";
             tbx_codigo_mascota.Text = "0";
             tbx_codigo_cliente.Text = "0";

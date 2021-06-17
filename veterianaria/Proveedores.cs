@@ -62,6 +62,7 @@ namespace veterianaria
             if (tbx_telefono.Text == "" || tbx_nombre.Text == "")
             {
                 MessageBox.Show("Necesitas al menos un nombre y un telefono.", "¡ERROR!");
+                conectandose.Desconectar();
                 return;
             }
 
@@ -183,11 +184,13 @@ namespace veterianaria
             if (tbx_telefono.Text == "" || tbx_nombre.Text == "")
             {
                 MessageBox.Show("Necesitas al menos un nombre y un telefono.", "¡ERROR!");
+                conectandose.Desconectar();
                 return;
             }
             else if (tbx_consulta_codigo.Text == "0" || tbx_consulta_codigo.Text == "")
             {
                 MessageBox.Show("Para modificar datos del PROVEEDOR necesitas el codigo del mismo.", "¡ERROR!");
+                conectandose.Desconectar();
                 return;
             }
 
